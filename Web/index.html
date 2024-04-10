@@ -1,55 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centro</title>
-    <link rel="stylesheet" href="styles/estilos_general.css">
-    <link rel="stylesheet" href="styles/estilos_index.css">
-    <link rel="icon" href="img/logo.png">
-    
+    <link rel="stylesheet" href="/Web/styles/estilos_general.css">
+    <link rel="stylesheet" href="/Web/styles/estilos_index.css">
+    <link rel="icon" href="/Web/img/logo2.png">
+
 </head>
+
 <body>
     <header id="nav-menu">
         <div id="logo-div">
-            <img src="img/logo.png" id="logo-pequeño">
+            <img src="/Web/img/logo2.png" id="logo-pequeño">
         </div>
 
         <div id="pag-principales">
-        <!-- Links de las dinstintas paginas -->
-            <a href="index.html" class="menu-pag">Curso</a>
-            <a href="clases_entrenamientos.html" class="menu-pag">Clases y entrenamientos</a>
-            <a href="contacto.html" class="menu-pag">Contacto</a> 
+            <!-- Links de las dinstintas paginas -->
+            <a href="/Web/index.html" class="menu-pag">Curso</a>
+            <a href="/Web/clases_entrenamientos.html" class="menu-pag">Clases y entrenamientos</a>
+            <a href="/Web/contacto.html" class="menu-pag">Contacto</a>
         </div>
 
         <div id="sesion-div">
-        <!-- Boton de inicio de unirse y apuntarse-->
-            <a href="login.html" class="menu-pag" id="apuntate">Apuntate</a>
+            <!-- Boton de inicio de unirse y apuntarse-->
+            <a href="/Web/login.html" class="menu-pag" id="apuntate">Apuntate</a>
             <a href=" #" class="menu-pag">Unete</a>
         </div>
     </header>
     <main>
+
         <!-- Carrusel con las fotos de antes vs despues-->
         <!-- Body de la pagina y un boton que lleve a la pagina de inscripcion-->
         <!-- Añadir mas informacion sobre el centro-->
-        
+        <div id="carousel">
+            <div class="carousel-slide">
+                <img src="/Web/img/antes-despues1.png">
+            </div>
+            <div class="carousel-slide">
+                <img src="/Web/img/antes-despues2.png">
+            </div>
+            <div class="carousel-slide">
+                <img src="/Web/img/antes-despues3.png">
+            </div>
+            <div class="carousel-slide">
+                <img src="/Web/img/antes-despues3.png">
+            </div>
+            <div class="carousel-slide">
+                <img src="/Web/img/antes-despues3.png">
+            </div>
+
+            <div class="barra-progreso">
+                <div class="progreso"></div>
+            </div>
+            <div class="puntos"></div>
+        </div>
+
+
+        <div id="cuerpo">
+            <p>En MazaoGym, nos dedicamos a ayudarte a alcanzar tus metas de fitness y bienestar de una manera
+                divertida, motivadora y efectiva. Nuestra misión es ofrecerte un espacio donde puedas mejorar tu salud
+                física y mental, independientemente de tu nivel de condición física o experiencia previa en el gimnasio.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat orci sit amet mauris volutpat, eu
+                scelerisque enim gravida. Quisque faucibus porta maximus. Sed mi urna, facilisis at sagittis sit amet,
+                pulvinar ut nunc. Etiam gravida suscipit mi, ac ornare eros volutpat ac. Nam turpis nunc, tincidunt ac
+                risus vel, faucibus mollis ipsum. Integer nec semper arcu. Aenean facilisis tempor metus sed viverra.
+                Mauris non enim accumsan, placerat eros nec, elementum massa. Integer auctor tincidunt aliquet.</p>
+        </div>
+
     </main>
     <footer>
         <!-- 3 divs en flex direction row-->
-        <div class="links-footer-div">
-        <!-- Links varios, derechos de autor, aviso legal y politica de cookies-->
-        <img src="img/logo.png" id="logo-grande">
+        <div id="links-footer-div">
+            <!-- Links varios, derechos de autor, aviso legal y politica de cookies-->
+            <img src="/Web/img/logo.png" id="logo-grande">
+            <p></p>
+            <p id="copyright">&#169; Derechos Reservados</p>
 
         </div>
-        <div class="contacto-footer-div">
-        <!-- Contacto y redes sociales-->
+        <div id="contacto-footer-div">
+            <!-- Contacto y redes sociales-->
+            <p class="nombre-seccion">CONTÁCTANOS</p>
+            <a href="tel:+34 924456789">+34 924 45 67 89</a>
+            <a href="mailto:contacto@mazaogym.com">contacto@mazaogym.com</a>
+            <a href="https://instagram.com" class="redsocial"><img src="/Web/img/instagram.png"
+                    class="logo-redsocial"></a>
+            <a href="https://twitter.com" class="redsocial"><img src="/Web/img/twitter.png" class="logo-redsocial"></a>
+            <a href="https://facebook.com" class="redsocial"><img src="/Web/img/facebook.png"
+                    class="logo-redsocial"></a>
 
         </div>
-        <div class="encuentra-footer-div">
-        <!-- iFrame del mapa con la localizacion-->
-        <!-- direccion exacta en la que se encuentra-->
-            
-        </div>
+        <div id="encuentra-footer-div">
+            <p class="nombre-seccion">ENCUÉNTRANOS</p>
+            <!-- iFrame del mapa con la localizacion-->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d652.9965703877186!2d-6.9806870269362005!3d38.87383348440964!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1712772750511!5m2!1ses!2ses"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" id="localizacion"></iframe>
+            <!-- direccion exacta en la que se encuentra-->
     </footer>
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const barra_progreso = document.querySelector('.progreso');
+        const puntos = document.querySelector('.puntos');
+
+        for (let i = 0; i < slides.length; i++) {
+            const punto = document.createElement('span');
+            punto.classList.add('punto');
+            puntos.appendChild(punto);
+        }
+
+        const puntosIndicadores = document.querySelectorAll('.punto');
+
+        function showSlides() {
+            slides.forEach(slide => slide.style.display = 'none');
+            puntosIndicadores.forEach(punto => punto.classList.remove('active')); // Quitar clase 'active' de todos los puntos
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = 'block';
+            puntosIndicadores[slideIndex - 1].classList.add('active'); // Activar punto correspondiente al índice actual
+            barra_progreso.style.width = '0';
+            setTimeout(updateprogreso, 1);
+            setTimeout(showSlides, 5010);
+        }
+
+        function updateprogreso() {
+            let progresoWidth = 0;
+            const interval = 100;
+            const totalTime = 4800;
+            const increment = interval / totalTime * 100;
+            const updatebarra_progreso = setInterval(() => {
+                progresoWidth += increment;
+                barra_progreso.style.width = `${progresoWidth}%`;
+                if (progresoWidth >= 100) {
+                    clearInterval(updatebarra_progreso);
+                }
+            }, interval);
+        }
+
+        showSlides();
+
+
+
+    </script>
 </body>
+
 </html>

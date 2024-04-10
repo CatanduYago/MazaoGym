@@ -1,29 +1,40 @@
 @font-face {
-    font-family:'Jetbrains';
+    font-family: 'Jetbrains';
     src: url('/Web/fonts/JetBrainsMono-Regular.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: 'Jaldi';
+    src: url('/Web/fonts/Jaldi-Regular.ttf') format('truetype');
+}
+
 :root {
-    --body-background-color:     #E0FBFC;
-    --menu-background-color:     #293241;
+    --body-background-color: #E0FBFC;
+    --menu-background-color: #293241;
     --detalles-background-color: #EE6C4D;
-    --otro:                      #98C1D9;
-    --otro2:                     #3D5A80;
-  }
-body{
+    --otro: #98C1D9;
+    --otro2: #3D5A80;
+}
+
+body {
     margin: 0;
     padding: 0;
     background-color: var(--body-background-color);
 }
-#nav-menu{
+
+#nav-menu {
     display: flex;
     flex-direction: row;
     background-color: var(--menu-background-color);
-    width: 100%;
+    width: auto;
     height: auto;
-    padding: 20px;
-    justify-content: space-around;
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: space-between;
+    align-items: center;
 }
-#nav-menu a{
+
+#nav-menu a {
     font-family: 'Jetbrains';
     text-decoration: none;
     text-transform: uppercase;
@@ -31,19 +42,189 @@ body{
     padding: 10px;
     font-size: 13px;
 }
-#sesion-div{
+
+#logo-div {
+    max-width: 35px;
+}
+
+#logo-pequeño {
+    width: 50px;
+    padding: 10px;
+    margin: 0;
+}
+
+#sesion-div {
     align-items: end;
     float: right;
+    height: 100%;
 }
-#pag-principales{
-    align-items: start;
+
+#pag-principales {
+    display: flex;
     float: left;
-
-
+    justify-content: space-between;
 }
-#sesion-div #apuntate{
+
+#sesion-div #apuntate {
     background-color: var(--detalles-background-color);
-    padding-top: 25px;
-    padding-bottom: 21.5px;
+    padding-top: 100%;
+    padding-bottom: 28px;
 }
 
+#carousel {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+
+}
+
+.carousel-slide {
+    display: none;
+    padding-bottom: 0;
+}
+
+.carousel-slide img {
+    width: 550px;
+    height: 300px;
+}
+
+.active {
+    display: block;
+}
+
+.barra-progreso {
+    width: 20%;
+    background-color: var(--otro);
+    height: 10px;
+    border-radius: 15px;
+    align-items: center;
+    margin-left: 40%;
+    margin-top: 10px;
+
+}
+
+.progreso {
+    background-color: var(--otro2);
+    height: 100%;
+    width: 0;
+    text-align: center;
+    transition: width 0.3s ease;
+    border-radius: 15px;
+
+}
+
+#cuerpo {
+    padding-top: 50px;
+
+}
+
+p,
+span {
+    font-size: 15px;
+    font-family: 'Jaldi';
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: justify;
+
+}
+
+.nombre-seccion {
+    font-family: 'Jetbrains';
+    margin-left: 0;
+
+}
+
+footer {
+    background-color: var(--menu-background-color);
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    bottom: 0;
+    margin: 0;
+    margin-top: 5%;
+    height: auto;
+
+}
+.puntos {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.punto {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    background-color:var(--otro);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.punto.active {
+    background-color:var(--otro2);;
+}
+#links-footer-div,
+#encuentra-footer-div {
+    width: 33%;
+    padding: 10px;
+    height: 300px;
+    margin-bottom: 0%;
+    align-items: center;
+
+}
+
+#links-footer-div {
+    align-items: center;
+}
+
+#contacto-footer-div {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    padding: 10px;
+    height: 300px;
+    align-items: start;
+
+}
+
+#contacto-footer-div a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Jaldi';
+    padding: 5px;
+}
+
+.logo-redsocial {
+    width: 20px;
+    padding: 5px;
+
+}
+
+.redsocial {
+    float: right;
+    padding: 5px;
+    align-self: end;
+    margin-right: 150px;
+}
+
+#logo-grande {
+    width: 100px;
+    padding-top: 15%;
+}
+
+#localizacion {
+    width: 500px;
+    height: 230px;
+}
+
+#calle {
+    float: right;
+}
+
+#copyright {
+    padding-top: 14%;
+}
