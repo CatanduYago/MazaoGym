@@ -1,0 +1,49 @@
+@font-face {
+    font-family:'Jetbrains';
+    src: url('/Web/fonts/JetBrainsMono-Regular.ttf') format('truetype');
+}
+:root {
+    --body-background-color:     #E0FBFC;
+    --menu-background-color:     #293241;
+    --detalles-background-color: #EE6C4D;
+    --otro:                      #98C1D9;
+    --otro2:                     #3D5A80;
+  }
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--body-background-color);
+}
+#nav-menu{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--menu-background-color);
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    justify-content: space-around;
+}
+#nav-menu a{
+    font-family: 'Jetbrains';
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 13px;
+}
+#sesion-div{
+    align-items: end;
+    float: right;
+}
+#pag-principales{
+    align-items: start;
+    float: left;
+
+
+}
+#sesion-div #apuntate{
+    background-color: var(--detalles-background-color);
+    padding-top: 25px;
+    padding-bottom: 21.5px;
+}
+
