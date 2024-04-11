@@ -1,0 +1,124 @@
+#div_padre {
+    display: grid;
+    place-items: center;
+    height: 800px;
+    justify-content: center;
+}
+
+#div_centro {
+    border: 2px transparent;
+    bottom: 0;
+    border-radius: 10% 50% 10% 50% / 50% 10% 50% 10%;
+    padding: 15px;
+    display: grid;
+    place-items: center;
+    background: transparent;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 25px #00000099;
+    backdrop-filter: blur(10px);
+    width: 500px;
+    height: 400px;
+    transition: 1s;
+}
+
+input {
+    text-align: left;
+    background-color: #ECF0F1;
+    border: 1px solid #00000080;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 200;
+    padding: 15px;
+    margin: 10px;
+    width: 350px;
+    height: 25px;
+    transition: 2.2s;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-shadow: #fffff0 5px 5px 10px;
+}
+
+input:focus {
+    border: 1px solid #000000;
+    box-shadow: #e042c3 5px 5px 10px;
+    transition: 0.25s;
+    outline: none;
+}
+
+h1 {
+    margin-top: 20px;
+    color: #ffffff;
+    transition: 1.5s;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.btn_lgn,
+.btn_lgn2 {
+    transition: 1.5s;
+    border: 2px solid transparent;
+    background: hsla(0, 0%, 13%, 0.877);
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 25px;
+    padding: 10px 0;
+    text-decoration: none;
+    text-shadow: none;
+    border-radius: 25px;
+    box-shadow: none;
+    display: block;
+    width: 100px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-shadow: #fffff0 5px 4px 10px;
+}
+
+.btn_lgn:hover {
+    background-color: #85e985;
+    color: black;
+    box-shadow: #6fdb4e 5px 3px 10px;
+    transition: ease 0.3s;
+    cursor: pointer;
+}
+
+.btn_lgn2:hover {
+    background-color: #e98585;
+    color: black;
+    box-shadow: #db4e4e 5px 3px 10px;
+    transition: ease 0.3s;
+    cursor: pointer;
+}
+
+#botons {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+}
+
+#botons button {
+    margin: 30px;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+#registro-span {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+#registro-span a:hover {
+    transition: 0.3s;
+    text-shadow: #ffffee 0px 0px 5px;
+}

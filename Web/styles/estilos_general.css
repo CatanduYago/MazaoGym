@@ -64,7 +64,6 @@ body::-webkit-scrollbar-thumb {
 
 #sesion-div #apuntate:hover {
     color: #000000;
-
 }
 
 #logo-div {
@@ -95,13 +94,9 @@ body::-webkit-scrollbar-thumb {
     padding-bottom: 27px;
 }
 
-
-
 .nombre-seccion {
     font-family: 'Jetbrains';
     margin-left: 0;
-
-
 }
 
 footer {
@@ -114,11 +109,8 @@ footer {
     bottom: 0;
     margin: 0;
     margin-top: 5%;
-    height: auto;
-
+    height: 340px;
 }
-
-
 
 #links-footer-div,
 #encuentra-footer-div {
@@ -127,7 +119,6 @@ footer {
     height: 300px;
     margin-bottom: 0%;
     align-items: center;
-
 }
 
 #links-footer-div {
@@ -141,20 +132,23 @@ footer {
     padding: 10px;
     height: 300px;
     align-items: start;
-
 }
 
 #contacto-footer-div a {
     text-decoration: none;
     color: #ffffff;
     font-family: 'Jaldi';
+    font-size: 18px;
     padding: 5px;
+}
+
+.icono-contacto {
+    width: 18px;
 }
 
 .logo-redsocial {
     width: 20px;
     padding: 5px;
-
 }
 
 .redsocial {
@@ -179,5 +173,5 @@ footer {
 }
 
 #copyright {
-    padding-top: 14%;
+    margin-top: 10%;
 }
