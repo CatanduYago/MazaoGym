@@ -21,7 +21,18 @@ body {
     padding: 0;
     background-color: var(--body-background-color);
 }
-
+body::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--detalles-background-color);        
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--otro2);;    
+    border-radius: 0px;       
+  }
 #nav-menu {
     display: flex;
     flex-direction: row;
@@ -40,7 +51,7 @@ body {
     text-transform: uppercase;
     color: #ffffff;
     padding: 10px;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 #logo-div {
@@ -68,13 +79,13 @@ body {
 #sesion-div #apuntate {
     background-color: var(--detalles-background-color);
     padding-top: 100%;
-    padding-bottom: 28px;
+    padding-bottom: 27px;
 }
 
 #carousel {
     position: relative;
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 750px;
+    margin: auto;
     text-align: center;
     padding: 20px;
 
@@ -83,11 +94,13 @@ body {
 .carousel-slide {
     display: none;
     padding-bottom: 0;
+    transition: width 0.3s ease;
+
 }
 
 .carousel-slide img {
-    width: 550px;
-    height: 300px;
+    width: 750px;
+    height: 450px;
 }
 
 .active {
@@ -116,12 +129,13 @@ body {
 }
 
 #cuerpo {
-    padding-top: 50px;
-
+    max-width: 1200px;
+    text-align: center;
+    margin: 0 auto;
 }
 
 p,
-span {
+span{
     font-size: 15px;
     font-family: 'Jaldi';
     margin-left: 15%;
@@ -129,10 +143,28 @@ span {
     text-align: justify;
 
 }
+#inscribete{
+    background-color: var(--detalles-background-color);
+    border: 0;
+    padding: 12px;
+    float: right;
+    margin-right: 25%;
+    text-transform: uppercase;
+    font-family: 'Jaldi';
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-decoration: none;
 
+}
+main{
+    margin-bottom: 10%;
+}
 .nombre-seccion {
     font-family: 'Jetbrains';
     margin-left: 0;
+
 
 }
 
@@ -166,6 +198,7 @@ footer {
 
 .punto.active {
     background-color:var(--otro2);;
+    
 }
 #links-footer-div,
 #encuentra-footer-div {
@@ -208,7 +241,7 @@ footer {
     float: right;
     padding: 5px;
     align-self: end;
-    margin-right: 150px;
+margin-right: 65%;
 }
 
 #logo-grande {
@@ -217,7 +250,7 @@ footer {
 }
 
 #localizacion {
-    width: 500px;
+    width: 450px;
     height: 230px;
 }
 
