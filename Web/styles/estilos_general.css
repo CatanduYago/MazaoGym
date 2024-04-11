@@ -21,18 +21,21 @@ body {
     padding: 0;
     background-color: var(--body-background-color);
 }
+
 body::-webkit-scrollbar {
     width: 10px;
-  }
-  
-  body::-webkit-scrollbar-track {
-    background: var(--detalles-background-color);        
-  }
-  
-  body::-webkit-scrollbar-thumb {
-    background-color: var(--otro2);;    
-    border-radius: 0px;       
-  }
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--detalles-background-color);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--otro2);
+    ;
+    border-radius: 0px;
+}
+
 #nav-menu {
     display: flex;
     flex-direction: row;
@@ -52,6 +55,16 @@ body::-webkit-scrollbar {
     color: #ffffff;
     padding: 10px;
     font-size: 15px;
+    margin: 10px;
+}
+
+#nav-menu a:hover {
+    color: #d1d1d1;
+}
+
+#sesion-div #apuntate:hover {
+    color: #000000;
+
 }
 
 #logo-div {
@@ -88,14 +101,12 @@ body::-webkit-scrollbar {
     margin: auto;
     text-align: center;
     padding: 20px;
-
 }
 
 .carousel-slide {
     display: none;
     padding-bottom: 0;
     transition: width 0.3s ease;
-
 }
 
 .carousel-slide img {
@@ -110,7 +121,7 @@ body::-webkit-scrollbar {
 .barra-progreso {
     width: 20%;
     background-color: var(--otro);
-    height: 10px;
+    height: 8px;
     border-radius: 15px;
     align-items: center;
     margin-left: 40%;
@@ -124,7 +135,7 @@ body::-webkit-scrollbar {
     width: 0;
     text-align: center;
     transition: width 0.3s ease;
-    border-radius: 15px;
+    border-radius: 20px;
 
 }
 
@@ -135,7 +146,7 @@ body::-webkit-scrollbar {
 }
 
 p,
-span{
+span {
     font-size: 15px;
     font-family: 'Jaldi';
     margin-left: 15%;
@@ -143,7 +154,8 @@ span{
     text-align: justify;
 
 }
-#inscribete{
+
+#inscribete {
     background-color: var(--detalles-background-color);
     border: 0;
     padding: 12px;
@@ -158,9 +170,11 @@ span{
     text-decoration: none;
 
 }
-main{
+
+main {
     margin-bottom: 10%;
 }
+
 .nombre-seccion {
     font-family: 'Jetbrains';
     margin-left: 0;
@@ -181,6 +195,7 @@ footer {
     height: auto;
 
 }
+
 .puntos {
     text-align: center;
     margin-top: 10px;
@@ -188,18 +203,19 @@ footer {
 
 .punto {
     display: inline-block;
-    height: 10px;
-    width: 10px;
-    background-color:var(--otro);
+    height: 8px;
+    width: 8px;
+    background-color: var(--otro);
     border-radius: 50%;
     margin: 0 5px;
     cursor: pointer;
 }
 
 .punto.active {
-    background-color:var(--otro2);;
-    
+    background-color: var(--otro2);
+
 }
+
 #links-footer-div,
 #encuentra-footer-div {
     width: 33%;
@@ -241,7 +257,7 @@ footer {
     float: right;
     padding: 5px;
     align-self: end;
-margin-right: 65%;
+    margin-right: 65%;
 }
 
 #logo-grande {
