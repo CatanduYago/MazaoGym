@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro</title>
+    <link rel="stylesheet" href="/Web/styles/estilos_general.css">
+    <link rel="stylesheet" href="/Web/styles/estilos_usuario.css">
+    <link rel="icon" href="/Web/img/logo2.png">
+
+</head>
+
+<body>
+    <header id="nav-menu">
+        <div id="logo-div">
+            <img src="/Web/img/logo2.png" id="logo-pequeño">
+        </div>
+
+        <div id="pag-principales">
+            <!-- Links de las dinstintas paginas -->
+            <a href="/Web/index.html" class="menu-pag">Curso</a>
+            <a href="/Web/clases_entrenamientos.html" class="menu-pag">Clases y entrenamientos</a>
+            <a href="/Web/contacto.html" class="menu-pag">Contacto</a>
+        </div>
+
+        <div id="sesion-div">
+            <!-- Boton de inicio de unirse y apuntarse-->
+            <a href="/Web/inscripcion" class="menu-pag" id="apuntate">Apuntate</a>
+            <a href="/Web/login.html" class="menu-pag">Unete</a>
+        </div>
+    </header>
+    <main>
+        <!-- -->
+        <div id="div_padre">
+            <form method="post" action="#" id="div_centro">
+                <h1>Iniciar sesión</h1>
+                <input type="text" placeholder="Usuario">
+                <input type="password" placeholder="Contraseña">
+                <div id="botons">
+                    <button type="submit" class="btn_lgn">Acceder</button>
+                    <button type="reset" class="btn_lgn2">Cancelar</button>
+                </div>
+                <span id="registro-span">¿No tienes una cuenta? <a href="registro.html" >Registrate</a>.</span>
+            </form>
+        </div>
+
+    </main>
+    <footer>
+        <!-- 3 divs en flex direction row-->
+        <div id="links-footer-div">
+            <!-- derechos de autor-->
+            <img src="/Web/img/logo.png" id="logo-grande">
+            <p></p>
+            <p id="copyright">&#169; Derechos Reservados</p>
+
+        </div>
+        <div id="contacto-footer-div">
+            <!-- Contacto y redes sociales-->
+            <p class="nombre-seccion">CONTÁCTANOS</p>
+            <a href="tel:+34 924456789" target="_blank">+34 924 45 67 89</a>
+            <a href="mailto:contacto@mazaogym.com" target="_blank">contacto@mazaogym.com</a>
+            <a href="https://instagram.com" class="redsocial"><img src="/Web/img/instagram.png" class="logo-redsocial"></a>
+            <a href="https://twitter.com" class="redsocial"><img src="/Web/img/twitter.png" class="logo-redsocial"></a>
+            <a href="https://facebook.com" class="redsocial"><img src="/Web/img/facebook.png" class="logo-redsocial"></a>
+            <span> <a href="https://altafitgymclub.com/aviso-legal/" target="_blank">Aviso legal</a> | <a
+                    href="https://altafitgymclub.com/politica-de-cookies/" target="_blank">Política de cookies</a>
+            </span>
+
+        </div>
+        <div id="encuentra-footer-div">
+            <p class="nombre-seccion">ENCUÉNTRANOS</p>
+            <!-- iFrame del mapa con la localizacion-->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d652.9965703877186!2d-6.9806870269362005!3d38.87383348440964!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1712772750511!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen=""
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="localizacion"></iframe>
+    </footer>
+
+</body>
+
+</html>
