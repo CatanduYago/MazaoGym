@@ -26,7 +26,8 @@
     backdrop-filter: blur(10px);
     width: 500px;
     height: 400px;
-    transition: 1s;
+    transition: 0.5s;
+    
 }
 
 input {
@@ -57,7 +58,6 @@ input:focus {
 h1 {
     margin-top: 20px;
     color: #ffffff;
-    transition: 1.5s;
     font-weight: normal;
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -67,7 +67,6 @@ h1 {
 
 .btn_lgn,
 .btn_lgn2 {
-    transition: 1.5s;
     border: 2px solid transparent;
     background: hsla(0, 0%, 13%, 0.877);
     color: #ffffff;

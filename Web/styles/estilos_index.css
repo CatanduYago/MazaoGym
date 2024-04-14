@@ -3,7 +3,7 @@
     max-width: 750px;
     margin: auto;
     text-align: center;
-    padding: 20px;
+    padding: 1rem;
 }
 
 .carousel-slide {
@@ -41,7 +41,7 @@
 }
 
 #cuerpo {
-    max-width: 1200px;
+    max-width: clamp(300px, 80%, 1000px);
     text-align: center;
     margin: 0 auto;
 }
@@ -52,10 +52,10 @@
 
 p,
 span {
-    font-size: 15px;
     font-family: 'Jaldi';
-    margin-left: 15%;
-    margin-right: 15%;
+    font-size: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
     text-align: justify;
 }
 

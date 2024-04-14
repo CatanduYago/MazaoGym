@@ -42,8 +42,8 @@ body::-webkit-scrollbar-thumb {
     background-color: var(--menu-background-color);
     width: auto;
     height: auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
     justify-content: space-between;
     align-items: center;
 }
@@ -54,7 +54,7 @@ body::-webkit-scrollbar-thumb {
     text-transform: uppercase;
     color: #ffffff;
     padding: 10px;
-    font-size: 15px;
+    font-size: clamp(12px, 1vw, 15px);
     margin: 10px;
 }
 
@@ -71,10 +71,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 #logo-pequeño {
-    width: 50px;
+    width: clamp(30px, 5vw, 50px);
     padding: 10px;
     margin: 0;
 }
+
 
 #sesion-div {
     align-items: end;
@@ -110,14 +111,16 @@ footer {
     margin: 0;
     margin-top: 5%;
     height: 340px;
+    flex-wrap: wrap;
+    clear: both;
 }
 
 #links-footer-div,
 #encuentra-footer-div {
-    width: 33%;
-    padding: 10px;
+    width: clamp(250px, 30%, 480px); 
+    padding: 1rem; 
+    margin-bottom: 1rem;
     height: 300px;
-    margin-bottom: 0%;
     align-items: center;
 }
 
@@ -128,8 +131,9 @@ footer {
 #contacto-footer-div {
     display: flex;
     flex-direction: column;
-    width: 33%;
-    padding: 10px;
+    width: clamp(250px, 30%, 500px); 
+    padding: 1rem; 
+    margin-bottom: 1rem;
     height: 300px;
     align-items: start;
 }
