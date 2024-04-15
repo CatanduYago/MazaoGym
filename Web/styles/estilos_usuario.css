@@ -13,21 +13,37 @@
     justify-content: center;
 }
 
+#fondo_login {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    filter: blur(5px);
+}
+
 #div_centro {
     border: 2px transparent;
     bottom: 0;
-    border-radius: 10% 50% 10% 50% / 50% 10% 50% 10%;
-    padding: 15px;
+    border-radius: 10%;
+    padding: 5px;
     display: grid;
     place-items: center;
     background: transparent;
     background: var(--menu-background-color);
-    box-shadow: 0 15px 25px var(--otro);
+    box-shadow: 10px 10px 20px var(--detalles-background-color);
     backdrop-filter: blur(10px);
     width: 500px;
     height: 400px;
     transition: 0.5s;
-    
+}
+
+.input_icon {
+    position: absolute;
+    right: 90px;
+    top: 45%;
+    cursor: pointer;
+    width: 35px;
 }
 
 input {
@@ -42,7 +58,6 @@ input {
     width: 350px;
     height: 25px;
     transition: 1.2s;
-    text-transform: uppercase;
     font-size: 14px;
     font-family: 'Jaldi';
     box-shadow: var(--otro) 5px 5px 10px;

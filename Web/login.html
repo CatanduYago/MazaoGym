@@ -9,6 +9,19 @@
     <link rel="stylesheet" href="/Web/styles/estilos_usuario.css">
     <link rel="icon" href="/Web/img/logo2.png">
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const input = document.getElementById("password");
+            const inputIcon = document.querySelector(".input_icon");
+
+            inputIcon.addEventListener("click", function() {
+                const type = input.getAttribute("type") === "password" ? "text" : "password";
+                input.setAttribute("type", type);
+                inputIcon.setAttribute("src", `/Web/img/ojo_${type === "password" ? "cerrado" : "abierto"}.png`);
+            });
+        });
+    </script>
+
 </head>
 
 <body>
@@ -32,18 +45,21 @@
     </header>
     <main>
         <!-- -->
+        <img src="/Web/img/fondo.avif" id="fondo_login">
+        </form>
         <div id="div_padre">
             <form method="post" action="#" id="div_centro">
                 <h1>Iniciar sesión</h1>
-                <input type="text" placeholder="Usuario">
-                <input type="password" placeholder="Contraseña">
+                <input type="text" placeholder="USUARIO">
+                <input id="password" type="password" class="input_field" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$" placeholder="CONTRASEÑA">
+                <img title="Eye Icon" src="/Web/img/ojo_cerrado.png" class="input_icon toggle-password">
                 <div id="botons">
                     <button type="submit" class="btn_lgn">Acceder</button>
                     <button type="reset" class="btn_lgn2">Cancelar</button>
                 </div>
                 <span id="registro-span">¿No tienes una cuenta? <a href="registro.html" >Registrate</a>.</span>
-            </form>
         </div>
+        </form>
 
     </main>
     <footer>
