@@ -1,8 +1,8 @@
 :root {
-    --body-background-color: #E0FBFC;
+    --otro: #E0FBFC;
     --menu-background-color: #293241;
     --detalles-background-color: #EE6C4D;
-    --otro: #98C1D9;
+    --body-background-color: #98C1D9;
     --otro2: #3D5A80;
 }
 
@@ -25,13 +25,12 @@
 #div_centro {
     border: 2px transparent;
     bottom: 0;
-    border-radius: 10%;
     padding: 5px;
     display: grid;
     place-items: center;
     background: transparent;
     background: var(--menu-background-color);
-    box-shadow: 10px 10px 20px var(--detalles-background-color);
+    box-shadow: 1px 5px 10px #000000;
     backdrop-filter: blur(10px);
     width: 500px;
     height: 400px;
@@ -40,17 +39,16 @@
 
 .input_icon {
     position: absolute;
-    right: 90px;
-    top: 45%;
+    right: 80px;
+    top: 46%;
     cursor: pointer;
-    width: 35px;
+    width: 29px;
 }
 
 input {
     text-align: left;
     background-color: var(--otro);
     border: 1px solid var(--otro2);
-    border-radius: 30px;
     font-size: 18px;
     font-weight: 200;
     padding: 15px;
@@ -65,7 +63,7 @@ input {
 
 input:focus {
     border: 1px solid var(--otro);
-    box-shadow: var(--otro) 5px 5px 10px;
+    box-shadow: var(--body-background-color) 0px 0px 5px;
     transition: 0.5s;
     outline: none;
 }
@@ -97,7 +95,8 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-family: 'Jaldi';
-    box-shadow: #fffff0 5px 4px 10px;
+    box-shadow: var(--otro) 5px 5px 10px;
+    transition: 0.5s;
 }
 
 .btn_lgn:hover {
@@ -131,16 +130,18 @@ a {
     text-decoration: underline;
 }
 
-#registro-span {
+#registro-span,
+#registro-span a {
     color: #ffffff;
     text-transform: uppercase;
     font-size: 15px;
     margin-bottom: 20px;
     letter-spacing: 1px;
     font-family: 'Jaldi';
+    transition: 0.3s;
 }
 
 #registro-span a:hover {
     transition: 0.3s;
-    text-shadow: var(--otro) 2px 0px 5px;
+    text-shadow: var(--body-background-color) 2px 0px 5px;
 }
