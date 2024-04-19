@@ -125,6 +125,8 @@ footer {
 
 #links-footer-div {
     align-items: center;
+    font-family: 'Jaldi';
+
 }
 
 #contacto-footer-div {
@@ -143,8 +145,10 @@ footer {
     font-family: 'Jaldi';
     font-size: 18px;
     padding: 5px;
+}#contacto-footer-div img{
+    width: 20px;
+    vertical-align: middle;
 }
-
 .icono-contacto {
     width: 18px;
 }

@@ -29,8 +29,8 @@
     display: grid;
     place-items: center;
     background: transparent;
-    background: var(--menu-background-color);
-    box-shadow: 1px 5px 10px #000000;
+    background: var(--otro2);
+    box-shadow: 5px 5px 10px #000000b3;
     backdrop-filter: blur(10px);
     width: 500px;
     height: 400px;
@@ -40,9 +40,11 @@
 .input_icon {
     position: absolute;
     right: 80px;
-    top: 46%;
+    top: 44.5%;
     cursor: pointer;
-    width: 29px;
+    max-width: 29px;
+    max-height: 28px;
+    transition: 0.5s;
 }
 
 input {
@@ -51,21 +53,23 @@ input {
     border: 1px solid var(--otro2);
     font-size: 18px;
     font-weight: 200;
-    padding: 15px;
+    padding: 10px;
     margin: 10px;
     width: 350px;
     height: 25px;
     transition: 1.2s;
     font-size: 14px;
     font-family: 'Jaldi';
-    box-shadow: var(--otro) 5px 5px 10px;
+    box-shadow: var(--body-background-color) 0px 0px 0px;
 }
 
 input:focus {
     border: 1px solid var(--otro);
-    box-shadow: var(--body-background-color) 0px 0px 5px;
     transition: 0.5s;
     outline: none;
+    
+    box-shadow: var(--otro) 1px 1px 5px;
+
 }
 
 h1 {
@@ -95,23 +99,24 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-family: 'Jaldi';
-    box-shadow: var(--otro) 5px 5px 10px;
+    box-shadow: var(--otro) 1px 1px 5px;
+
     transition: 0.5s;
 }
 
 .btn_lgn:hover {
-    background-color: #85e985;
+    background-color: #9ad998;
     color: black;
-    box-shadow: #6fdb4e 5px 3px 10px;
-    transition: ease 0.3s;
+    box-shadow: #9ad998 1px 1px 5px;
+    transition: 0.3s;
     cursor: pointer;
 }
 
 .btn_lgn2:hover {
     background-color: #e98585;
     color: black;
-    box-shadow: #db4e4e 5px 3px 10px;
-    transition: ease 0.3s;
+    box-shadow: #e98585 1px 1px 5px;
+    transition: 0.3s;
     cursor: pointer;
 }
 
