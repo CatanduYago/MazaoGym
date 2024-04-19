@@ -110,8 +110,6 @@ footer {
     margin: 0;
     margin-top: 5%;
     height: 340px;
-    flex-wrap: wrap;
-    clear: both;
 }
 
 #links-footer-div,
@@ -126,7 +124,6 @@ footer {
 #links-footer-div {
     align-items: center;
     font-family: 'Jaldi';
-
 }
 
 #contacto-footer-div {
@@ -145,10 +142,13 @@ footer {
     font-family: 'Jaldi';
     font-size: 18px;
     padding: 5px;
-}#contacto-footer-div img{
+}
+
+#contacto-footer-div img {
     width: 20px;
     vertical-align: middle;
 }
+
 .icono-contacto {
     width: 18px;
 }

@@ -39,7 +39,7 @@
 
 .input_icon {
     position: absolute;
-    right: 80px;
+    right: 110px;
     top: 44.5%;
     cursor: pointer;
     max-width: 29px;
@@ -55,7 +55,7 @@ input {
     font-weight: 200;
     padding: 10px;
     margin: 10px;
-    width: 350px;
+    width: 300px;
     height: 25px;
     transition: 1.2s;
     font-size: 14px;
@@ -67,9 +67,7 @@ input:focus {
     border: 1px solid var(--otro);
     transition: 0.5s;
     outline: none;
-    
     box-shadow: var(--otro) 1px 1px 5px;
-
 }
 
 h1 {
@@ -85,38 +83,26 @@ h1 {
 .btn_lgn,
 .btn_lgn2 {
     border: 2px solid transparent;
-    background: hsla(0, 0%, 13%, 0.877);
+    background: var(--menu-background-color);
     color: #ffffff;
     font-size: 15px;
-    line-height: 25px;
     padding: 10px 0;
     text-decoration: none;
     text-shadow: none;
-    border-radius: 25px;
-    box-shadow: none;
     display: block;
     width: 100px;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-family: 'Jaldi';
-    box-shadow: var(--otro) 1px 1px 5px;
-
     transition: 0.5s;
 }
 
-.btn_lgn:hover {
-    background-color: #9ad998;
-    color: black;
-    box-shadow: #9ad998 1px 1px 5px;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
+.btn_lgn:hover,
 .btn_lgn2:hover {
-    background-color: #e98585;
+    background-color: var(--body-background-color);
     color: black;
-    box-shadow: #e98585 1px 1px 5px;
-    transition: 0.3s;
+    box-shadow: var(--body-background-color) 1px 1px 5px;
+    transition: 0.5s;
     cursor: pointer;
 }
 
