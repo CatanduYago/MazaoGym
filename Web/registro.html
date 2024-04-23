@@ -4,67 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acceso</title>
+    <title>Registro</title>
     <link rel="stylesheet" href="/Web/styles/estilos_general.css">
-    <link rel="stylesheet" href="/Web/styles/estilos_usuario.css">
+    <link rel="stylesheet" href="/Web/styles/estilos_registro.css">
     <link rel="icon" href="/Web/img/logo2.png">
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const input = document.getElementById("pass");
-            const inputIcon = document.querySelector(".input_icon");
-
-            inputIcon.addEventListener("click", function() {
-                const type = input.getAttribute("type") === "password" ? "text" : "password";
-                input.setAttribute("type", type);
-                inputIcon.setAttribute("src", `/Web/img/ojo_${type === "password" ? "cerrado" : "abierto"}.png`);
-            });
-
-            const div_centro = document.querySelector("#div_centro");
-            const btnLogin = document.querySelector(".btn_lgn");
-
-            btnLogin.addEventListener('click', event => {
-                event.preventDefault();
-                const username = document.querySelector('input[name="username"]').value;
-                const pass = document.querySelector('input[name="contrasena"]').value;
-
-                if (!username || !pass) {
-                    showAlert("Completa todos los campos, por favor.");
-                    return false;
-                }
-
-                const form = new FormData(div_centro);
-                form.append("function", "login");
-
-                fetch("data/Users.php", {
-                        method: "POST",
-                        body: form
-                    })
-                    .then(response => response.json())
-                    .then(json => {
-                        if (!json) {
-                            showAlert("No has podido iniciar sesión");
-                            return false;
-                        }
-                        sessionStorage.setItem("user", JSON.stringify(json));
-                    });
-            });
-        });
-
-        function showAlert(message) {
-            var alertBox = document.getElementById("alerta");
-            var alertMessage = document.getElementById("alert-message");
-            alertMessage.innerText = message;
-            alertBox.classList.add("show");
-        }
-
-        function closeAlert() {
-            var alertBox = document.getElementById("alerta");
-            alertBox.classList.remove("show");
-        }
-    </script>
-
-
 </head>
 
 <body>
@@ -88,21 +31,29 @@
     </header>
     <main>
         <!-- -->
-        <img src="/Web/img/fondo.avif" id="fondo_login">
+        <img src="/Web/img/fondo_login.jpg" id="fondo_login">
         </form>
         <div id="div_padre">
             <form method="post" action="#" id="div_centro">
-                <h1>Iniciar sesión</h1>
+                <h1>Registrate</h1>
+                <p></p>
+                <span class="span-inputs">DNI</span>
+                <input type="text" placeholder="DNI" name="dni">
+                <span class="span-inputs">Nombre</span>
+                <input type="text" placeholder="Nombre" name="nom">
+                <span class="span-inputs">Apellidos</span>
+                <input type="text" placeholder="Apellidos" name="ape">
+                <span class="span-inputs">Correo electrónico</span>
+                <input type="email" placeholder="Correo electrónico" name="correo">
+                <span class="span-inputs">Teléfono</span>
+                <input type="text" placeholder="Teléfono" name="telef">
                 <span class="span-inputs">Usuario</span>
-                <input type="text" placeholder="USUARIO" name="username">
-                <span class="span-inputs">&emsp;&emsp;Contraseña</span>
-                <input name="contrasena" id="pass" type="pass" class="input_field" placeholder="CONTRASEÑA">
-                <img title="Eye Icon" src="/Web/img/ojo_cerrado.png" class="input_icon toggle-pass">
+                <input type="password" placeholder="Contraseña" name="nombre">
                 <div id="botons">
-                    <button type="submit" class="btn_lgn">Acceder</button>
+                    <button type="submit" class="btn_lgn">Registrar</button>
                     <button type="reset" class="btn_lgn2">Cancelar</button>
                 </div>
-                <span id="registro-span">¿No tienes una cuenta? <a href="/Web/registro.html" >Registrate</a>.</span>
+                <span id="registro-span">¿Ya tienes una cuenta? <a href="/Web/login.html" >Accede</a>.</span>
         </div>
         </form>
 
@@ -136,10 +87,6 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d652.9965703877186!2d-6.9806870269362005!3d38.87383348440964!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1712772750511!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen=""
                 loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="localizacion"></iframe>
     </footer>
-    <div id="alerta" class="alerta">
-        <span id="alert-message"></span>
-        <button onclick="closeAlert()" id="alert-message">Aceptar</button>
-    </div>
 </body>
 
 </html>
