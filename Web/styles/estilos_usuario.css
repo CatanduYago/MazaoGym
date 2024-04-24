@@ -55,6 +55,7 @@ input {
     font-weight: 200;
     padding: 10px;
     margin: 10px;
+    margin-top: 0;
     width: 300px;
     height: 25px;
     transition: 1.2s;
@@ -172,11 +173,12 @@ a {
 }
 
 .span-inputs {
-    float: left;
     color: #ffffff;
     text-transform: uppercase;
-    letter-spacing: 1px;
     font-family: 'Jaldi';
-    justify-content: start;
-    margin-right: 52%;
+    margin: 5px; 
+    margin-bottom:0 ;
+    text-align: left; 
+    width: 64%;
+
 }
