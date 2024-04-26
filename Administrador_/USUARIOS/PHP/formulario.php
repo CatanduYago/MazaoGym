@@ -20,6 +20,12 @@ if (isset($_REQUEST['insertar'])) {
     borrar($conn, $dni);
 } elseif (isset($_REQUEST['consultar'])) {
     consultar($conn, $dni);
+} elseif (isset($_REQUEST['consultar_clases'])) {
+    consultar_clases($conn, $dni);
+} elseif (isset($_REQUEST['consultar_entrenamiento'])) {
+    consultar_entrenamiento($conn, $dni);
+} elseif (isset($_REQUEST['consultar_clases_entrenamientos_cliente'])) {
+    consultar_clases_entrenamientos_cliente($conn, $dni);
 } else {
     echo "caso no definido";
 }
@@ -75,32 +81,11 @@ function consultar($conn, $dni)
         echo "<head>";
         echo "<meta charset='UTF-8'>";
         echo "<meta name='viewport' content='width=device-width, initial-scale=1.0'>";
-        echo "<title>Documento</title>";
-        echo "<style>";
-        echo "body {";
-        echo "    display: flex;";
-        echo "    align-items: center;";
-        echo "    justify-content: center;";
-        echo "    height: 100vh;";
-        echo "    background-color: #f0f0f0;";
-        echo "}";
-        echo "table {";
-        echo "    border-collapse: collapse;";
-        echo "    width: 90%;";
-        echo "    margin: 20px;";
-        echo "    background-color: #e6e6fa;"; 
-        echo "}";
-        echo "th, td {";
-        echo "    border: 1px solid #cccccc;";
-        echo "    padding: 8px;";
-        echo "    text-align: center;";
-        echo "}";
-        echo "</style>";
+        echo "<title>Resultado de la Consulta</title>";
         echo "</head>";
         echo "<body>";
-        
 
-        echo "<table border='1' >";
+        echo "<table border='1'>";
         echo "<tr>";
         echo "<th>DNI</th>";
         echo "<th>Nombre</th>";
@@ -116,16 +101,16 @@ function consultar($conn, $dni)
 
         while ($dato = mysqli_fetch_assoc($r)) {
             echo "<tr>";
-            echo "<td>" . $dato["dni"] . "</td>";
-            echo "<td>" . $dato["nombre"] . "</td>";
-            echo "<td>" . $dato["nombre_usuario"] . "</td>";
-            echo "<td>" . $dato["contrasenia"] . "</td>";
-            echo "<td>" . $dato["apellidos"] . "</td>";
-            echo "<td>" . $dato["telefono"] . "</td>";
-            echo "<td>" . $dato["correo"] . "</td>";
-            echo "<td>" . $dato["direccion"] . "</td>";
-            echo "<td>" . $dato["pagos"] . "</td>";
-            echo "<td>" . $dato["foto_perfil"] . "</td>";
+            echo "<td>" . $dato["DNI"] . "</td>";
+            echo "<td>" . $dato["NOMBRE"] . "</td>";
+            echo "<td>" . $dato["NOMBRE_USUARIO"] . "</td>";
+            echo "<td>" . $dato["CONTRASENIA"] . "</td>";
+            echo "<td>" . $dato["APELLIDOS"] . "</td>";
+            echo "<td>" . $dato["TELEFONO"] . "</td>";
+            echo "<td>" . $dato["CORREO"] . "</td>";
+            echo "<td>" . $dato["DIRECCION"] . "</td>";
+            echo "<td>" . $dato["PAGOS"] . "</td>";
+            echo "<td>" . $dato["FOTO_PERFIL"] . "</td>";
             echo "</tr>";
         }
 
@@ -138,6 +123,7 @@ function consultar($conn, $dni)
         echo "<p>Error al consultar registro: " . mysqli_error($conn) . "</p>";
     }
 }
+
 function consultar_clases($conn, $dni)
 {
     $sql = "SELECT clases.* FROM clases
@@ -146,7 +132,35 @@ function consultar_clases($conn, $dni)
     $r = mysqli_query($conn, $sql);
 
     if ($r) {
-        
+        echo "<!DOCTYPE html>";
+        echo "<html lang='es'>";
+        echo "<head>";
+        echo "<meta charset='UTF-8'>";
+        echo "<meta name='viewport' content='width=device-width, initial-scale=1.0'>";
+        echo "<title>Resultado de la Consulta de Clases</title>";
+        echo "</head>";
+        echo "<body>";
+
+        echo "<table border='1'>";
+        echo "<tr>";
+        echo "<th>ID</th>";
+        echo "<th>Nombre de la Clase</th>";
+        echo "<th>Descripción</th>";
+        echo "</tr>";
+
+        while ($dato = mysqli_fetch_assoc($r)) {
+            echo "<tr>";
+            echo "<td>" . $dato["ID"] . "</td>";
+            echo "<td>" . $dato["NOMBRE"] . "</td>";
+            echo "<td>" . $dato["DESCRIPCION"] . "</td>";
+            echo "</tr>";
+        }
+
+        echo "</table>";
+        echo "<br><br>";
+        echo "<a href='index.html'>Volver</a>";
+        echo "</body>";
+        echo "</html>";
     } else {
         echo "<p>Error al consultar clases: " . mysqli_error($conn) . "</p>";
     }
@@ -160,7 +174,35 @@ function consultar_entrenamiento($conn, $dni)
     $r = mysqli_query($conn, $sql);
 
     if ($r) {
-        
+        echo "<!DOCTYPE html>";
+        echo "<html lang='es'>";
+        echo "<head>";
+        echo "<meta charset='UTF-8'>";
+        echo "<meta name='viewport' content='width=device-width, initial-scale=1.0'>";
+        echo "<title>Resultado de la Consulta de Entrenamiento</title>";
+        echo "</head>";
+        echo "<body>";
+
+        echo "<table border='1'>";
+        echo "<tr>";
+        echo "<th>ID</th>";
+        echo "<th>Nombre del Entrenamiento</th>";
+        echo "<th>Descripción</th>";
+        echo "</tr>";
+
+        while ($dato = mysqli_fetch_assoc($r)) {
+            echo "<tr>";
+            echo "<td>" . $dato["ID"] . "</td>";
+            echo "<td>" . $dato["NOMBRE"] . "</td>";
+            echo "<td>" . $dato["DESCRIPCION"] . "</td>";
+            echo "</tr>";
+        }
+
+        echo "</table>";
+        echo "<br><br>";
+        echo "<a href='index.html'>Volver</a>";
+        echo "</body>";
+        echo "</html>";
     } else {
         echo "<p>Error al consultar entrenamientos: " . mysqli_error($conn) . "</p>";
     }
@@ -175,10 +217,44 @@ function consultar_clases_entrenamientos_cliente($conn, $dni)
     $r = mysqli_query($conn, $sql);
 
     if ($r) {
-        
+        echo "<!DOCTYPE html>";
+        echo "<html lang='es'>";
+        echo "<head>";
+        echo "<meta charset='UTF-8'>";
+        echo "<meta name='viewport' content='width=device-width, initial-scale=1.0'>";
+        echo "<title>Resultado de la Consulta de Clases y Entrenamientos</title>";
+        echo "</head>";
+        echo "<body>";
+
+        echo "<table border='1'>";
+        echo "<tr>";
+        echo "<th>ID Clase</th>";
+        echo "<th>Nombre de la Clase</th>";
+        echo "<th>Descripción de la Clase</th>";
+        echo "<th>ID Entrenamiento</th>";
+        echo "<th>Nombre del Entrenamiento</th>";
+        echo "<th>Descripción del Entrenamiento</th>";
+        echo "</tr>";
+
+        while ($dato = mysqli_fetch_assoc($r)) {
+            echo "<tr>";
+            echo "<td>" . $dato["ID"] . "</td>";
+            echo "<td>" . $dato["NOMBRE"] . "</td>";
+            echo "<td>" . $dato["DESCRIPCION"] . "</td>";
+            echo "<td>" . $dato["ID_ENTRENAMIENTO"] . "</td>";
+            echo "<td>" . $dato["NOMBRE"] . "</td>";
+            echo "<td>" . $dato["DESCRIPCION"] . "</td>";
+            echo "</tr>";
+        }
+
+        echo "</table>";
+        echo "<br><br>";
+        echo "<a href='index.html'>Volver</a>";
+        echo "</body>";
+        echo "</html>";
     } else {
         echo "<p>Error al consultar clases y entrenamientos del cliente: " . mysqli_error($conn) . "</p>";
     }
 }
-
 ?>
+
