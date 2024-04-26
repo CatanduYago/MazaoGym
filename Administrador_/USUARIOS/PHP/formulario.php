@@ -1,16 +1,16 @@
 <?php require_once("../lib/conex.php") ?>
 
 <?php
-$dni = $_REQUEST['dni'];
-$nombre = $_REQUEST['nombre'];
-$nombre_usuario = $_REQUEST['nombre_usuario'];
-$contrasenia = $_REQUEST['contrasenia'];
-$apellidos = $_REQUEST['apellidos'];
-$telefono = $_REQUEST['telefono'];
-$correo = $_REQUEST['correo'];
-$direccion = $_REQUEST['direccion'];
-$pagos = $_REQUEST['pagos'];
-$foto_perfil = $_REQUEST['foto_perfil'];
+$dni = $_REQUEST['dni'] ?? null;
+$nombre = $_REQUEST['nombre']?? null;
+$nombre_usuario = $_REQUEST['nombre_usuario']?? null;
+$contrasenia = $_REQUEST['contrasenia']?? null;
+$apellidos = $_REQUEST['apellidos']?? null;
+$telefono = $_REQUEST['telefono']?? null;
+$correo = $_REQUEST['correo']?? null;
+$direccion = $_REQUEST['direccion']?? null;
+$pagos = $_REQUEST['pagos']?? null;
+$foto_perfil = $_REQUEST['foto_perfil']?? null;
 
 if (isset($_REQUEST['insertar'])) {
     insertar($conn, $dni, $nombre, $nombre_usuario, $contrasenia, $apellidos, $telefono, $correo, $direccion, $pagos, $foto_perfil);
