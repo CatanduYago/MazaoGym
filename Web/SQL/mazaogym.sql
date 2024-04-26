@@ -42,7 +42,8 @@ CREATE TABLE empleados (
     CORREO VARCHAR(100),
     UBICACION VARCHAR(100),
     SUELDO DECIMAL(10, 2),
-    HORARIO VARCHAR(50)
+    HORARIO VARCHAR(50),
+    CONTRASENIA VARCHAR(50)
 );
 
 -- Crear tabla relacion_clientes_clases_entrenamiento
