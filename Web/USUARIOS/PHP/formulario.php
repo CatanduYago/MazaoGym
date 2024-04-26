@@ -3,17 +3,16 @@
 <?php
 $dni = $_REQUEST['dni'];
 $nombre = $_REQUEST['nombre'];
-$nombre_usuario = $_REQUEST['nombre_usuario'];
-$contrasenia = $_REQUEST['contrasenia'];
+$nombre_usuario = generarNombreUsuario($nombre, $apellidos, $dni);$contrasenia = $_REQUEST['contrasenia'];
 $apellidos = $_REQUEST['apellidos'];
 $telefono = $_REQUEST['telefono'];
 $correo = $_REQUEST['correo'];
-$direccion = $_REQUEST['direccion'];
-$pagos = $_REQUEST['pagos'];
-$foto_perfil = $_REQUEST['foto_perfil'];
+$direccion ;
+$pagos;
+$foto_perfil;
 
 if (isset($_REQUEST['insertar'])) {
-    insertar($conn, $dni, $nombre, $nombre_usuario, $contrasenia, $apellidos, $telefono, $correo, $direccion, $pagos, $foto_perfil);
+    insertar($conn, $dni, $nombre, $nombre_usuario, $contrasenia, $apellidos, $telefono, $correo);
 } elseif (isset($_REQUEST['actualizar'])) {
     actualizar($conn, $dni, $nombre, $nombre_usuario, $contrasenia, $apellidos, $telefono, $correo, $direccion, $pagos, $foto_perfil);
 } elseif (isset($_REQUEST['borrar'])) {
@@ -23,16 +22,23 @@ if (isset($_REQUEST['insertar'])) {
 } else {
     echo "caso no definido";
 }
-
-function insertar($conn, $dni, $nombre, $nombre_usuario, $contrasenia, $apellidos, $telefono, $correo, $direccion, $pagos, $foto_perfil)
+function generarNombreUsuario($nombre, $apellidos, $dni) {
+    $ultimos_numeros_dni = substr($dni, -2);
+    $letra_dni = substr($dni, -1);
+    $apellidos_sin_espacios = strtolower(str_replace(" ", "", $apellidos));
+    $primera_letra_nombre = substr($nombre, 0, 1);
+    $nombre_usuario = $nombre.$apellidos_sin_espacios.$ultimos_numeros_dni.$letra_dni;
+    return $nombre_usuario;
+}
+function insertar($conn, $dni, $nombre, $nombre_usuario, $contrasenia, $apellidos, $telefono, $correo)
 {
     $sql = "INSERT INTO clientes (dni, nombre, nombre_usuario, contrasenia, apellidos, telefono, correo, direccion, pagos, foto_perfil) 
-            VALUES ('$dni', '$nombre', '$nombre_usuario', '$contrasenia', '$apellidos', '$telefono', '$correo', '$direccion', '$pagos', '$foto_perfil')";
+            VALUES ('$dni', '$nombre', '$nombre_usuario', '$contrasenia', '$apellidos', '$telefono', '$correo')";
 
     $r = mysqli_query($conn, $sql);
 
     if ($r) {
-        echo "<p>Registro insertado correctamente</p>";
+        header("Location: /Web/login.html");
     } else {
         echo "<p>Error al insertar registro: " . mysqli_error($conn) . "</p>";
     }
