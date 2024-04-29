@@ -20,6 +20,8 @@
                 inputIcon.setAttribute("src", `/Web/img/ojo_${type === "password" ? "cerrado" : "abierto"}.png`);
             });
 
+
+
             const div_centro = document.querySelector("#div_centro");
             const btnLogin = document.querySelector(".btn_lgn");
 
@@ -31,23 +33,11 @@
                 if (!username || !pass) {
                     showAlert("Completa todos los campos, por favor.");
                     return false;
+                } else {
+                    document.getElementById("div_centro").submit();
+
                 }
 
-                const form = new FormData(div_centro);
-                form.append("function", "login");
-
-                fetch("data/Users.php", {
-                        method: "POST",
-                        body: form
-                    })
-                    .then(response => response.json())
-                    .then(json => {
-                        if (!json) {
-                            showAlert("No has podido iniciar sesión");
-                            return false;
-                        }
-                        sessionStorage.setItem("user", JSON.stringify(json));
-                    });
             });
         });
 
@@ -89,22 +79,23 @@
     <main>
         <!-- -->
         <img src="/Web/img/fondo.avif" id="fondo_login">
-        </form>
         <div id="div_padre">
             <form method="post" action="/Administrador_/USUARIOS/PHP/registro.php" id="div_centro">
+
                 <h1>Iniciar sesión</h1>
                 <span class="span-inputs">Usuario</span>
                 <input type="text" placeholder="USUARIO" name="username">
                 <span class="span-inputs">Contraseña</span>
-                <input name="contrasena" id="pass" type="pass" class="input_field" placeholder="CONTRASEÑA">
+                <input name="contrasena" id="pass" type="password" class="input_field" placeholder="CONTRASEÑA">
                 <img title="Eye Icon" src="/Web/img/ojo_cerrado.png" class="input_icon toggle-pass">
                 <div id="botons">
                     <button type="submit" class="btn_lgn">Acceder</button>
                     <button type="reset" class="btn_lgn2">Cancelar</button>
                 </div>
-                <span id="registro-span">¿No tienes una cuenta? <a href="/Web/registro.html" >Registrate</a>.</span>
+                <span id="registro-span">¿No tienes una cuenta? <a href="/Web/registro.html">Registrate</a>.</span>
+            </form>
         </div>
-        </form>
+
 
     </main>
     <footer>
