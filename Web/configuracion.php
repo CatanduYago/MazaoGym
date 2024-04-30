@@ -73,10 +73,12 @@ mysqli_close($conn);
 
     </header>
     <main>
+    <h1>Configuración de perfil</h1>
+
     <div id="perfil-div">
-        <h1>Configuración de perfil</h1>
+
         <div id="perfil-info">
-            <p>Foto de perfil</p>
+        <p>Foto de perfil</p>
             <?php
             echo '<img src="/Web/img/perfil/' . $foto_perfil . '" id="perfil-img">';
             ?>
@@ -93,6 +95,9 @@ mysqli_close($conn);
                 }
                 ?>
             </div>
+        </div>
+        <div id="perfil-desc">
+            <p>Achuu</p>
         </div>
     </div>
 

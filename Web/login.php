@@ -72,7 +72,7 @@
 
         <div id="sesion-div">
             <!-- Boton de inicio de unirse y apuntarse-->
-            <a href="/Web/inscripcion" class="menu-pag" id="apuntate">Apuntate</a>
+            <a href="/Web/inscripcion.php" class="menu-pag" id="apuntate">Apuntate</a>
             <?php
             session_start();
             if (isset($_SESSION['username'])) {
