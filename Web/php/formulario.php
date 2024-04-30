@@ -3,7 +3,8 @@
 <?php
 $dni = $_REQUEST['dni'];
 $nombre = $_REQUEST['nombre'];
-$nombre_usuario = generarNombreUsuario($nombre, $apellidos, $dni);$contrasenia = $_REQUEST['contrasenia'];
+$nombre_usuario = generarNombreUsuario($nombre, $apellidos, $dni);
+$contrasena = $_REQUEST['contrasena'];
 $apellidos = $_REQUEST['apellidos'];
 $telefono = $_REQUEST['telefono'];
 $correo = $_REQUEST['correo'];
@@ -12,9 +13,9 @@ $pagos;
 $foto_perfil;
 
 if (isset($_REQUEST['insertar'])) {
-    insertar($conn, $dni, $nombre, $nombre_usuario, $contrasenia, $apellidos, $telefono, $correo);
+    insertar($conn, $dni, $nombre, $nombre_usuario, $contrasena, $apellidos, $telefono, $correo);
 } elseif (isset($_REQUEST['actualizar'])) {
-    actualizar($conn, $dni, $nombre, $nombre_usuario, $contrasenia, $apellidos, $telefono, $correo, $direccion, $pagos, $foto_perfil);
+    actualizar($conn, $dni, $nombre, $nombre_usuario, $contrasena, $apellidos, $telefono, $correo, $direccion, $pagos, $foto_perfil);
 } elseif (isset($_REQUEST['borrar'])) {
     borrar($conn, $dni);
 } elseif (isset($_REQUEST['consultar'])) {
@@ -30,10 +31,10 @@ function generarNombreUsuario($nombre, $apellidos, $dni) {
     $nombre_usuario = $nombre.$apellidos_sin_espacios.$ultimos_numeros_dni.$letra_dni;
     return $nombre_usuario;
 }
-function insertar($conn, $dni, $nombre, $nombre_usuario, $contrasenia, $apellidos, $telefono, $correo)
+function insertar($conn, $dni, $nombre, $nombre_usuario, $contrasena, $apellidos, $telefono, $correo)
 {
     $sql = "INSERT INTO clientes (dni, nombre, nombre_usuario, contrasenia, apellidos, telefono, correo, direccion, pagos, foto_perfil) 
-            VALUES ('$dni', '$nombre', '$nombre_usuario', '$contrasenia', '$apellidos', '$telefono', '$correo')";
+            VALUES ('$dni', '$nombre', '$nombre_usuario', '$contrasena', '$apellidos', '$telefono', '$correo')";
 
     $r = mysqli_query($conn, $sql);
 
@@ -44,9 +45,9 @@ function insertar($conn, $dni, $nombre, $nombre_usuario, $contrasenia, $apellido
     }
 }
 
-function actualizar($conn, $dni, $nombre, $nombre_usuario, $contrasenia, $apellidos, $telefono, $correo, $direccion, $pagos, $foto_perfil)
+function actualizar($conn, $dni, $nombre, $nombre_usuario, $contrasena, $apellidos, $telefono, $correo, $direccion, $pagos, $foto_perfil)
 {
-    $sql = "UPDATE clientes SET nombre='$nombre', nombre_usuario='$nombre_usuario', contrasenia='$contrasenia', 
+    $sql = "UPDATE clientes SET nombre='$nombre', nombre_usuario='$nombre_usuario', contrasenia='$contrasena', 
             apellidos='$apellidos', telefono='$telefono', correo='$correo', direccion='$direccion', pagos='$pagos', foto_perfil='$foto_perfil' WHERE dni='$dni'";
 
     $r = mysqli_query($conn, $sql);

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/Web/styles/estilos_general.css">
     <link rel="stylesheet" href="/Web/styles/estilos_registro.css">
     <link rel="icon" href="/Web/img/logo2.png">
+    
 </head>
 
 <body>
@@ -18,21 +19,21 @@
 
         <div id="pag-principales">
             <!-- Links de las dinstintas paginas -->
-            <a href="/Web/index.html" class="menu-pag">Curso</a>
-            <a href="/Web/clases_entrenamientos.html" class="menu-pag">Clases y entrenamientos</a>
-            <a href="/Web/contacto.html" class="menu-pag">Contacto</a>
+            <a href="/Web/index.php" class="menu-pag">Curso</a>
+            <a href="/Web/clases_entrenamientos.php" class="menu-pag">Clases y entrenamientos</a>
+            <a href="/Web/contacto.php" class="menu-pag">Contacto</a>
         </div>
 
         <div id="sesion-div">
             <!-- Boton de inicio de unirse y apuntarse-->
             <a href="/Web/inscripcion" class="menu-pag" id="apuntate">Apuntate</a>
-            <a href="/Web/login.html" class="menu-pag">Accede</a>
+            <a href="/Web/login.php" class="menu-pag">Accede</a>
         </div>
     </header>
     <main>
         <img src="/Web/img/fondo_login.jpg" id="fondo_login">
         <div id="div_padre">
-            <form method="post" action="/Web/USUARIOS/PHP/formulario.php?action=insertar" id="div_centro">
+            <form method="post" action="/Web/php/registro.php" id="div_centro">
                 <h1>Regístrate</h1>
                 <p></p>
                 <span class="span-inputs">DNI</span>
@@ -51,7 +52,7 @@
                     <button type="submit" class="btn_lgn" name="insertar">Registrar</button>
                     <button type="reset" class="btn_lgn2">Cancelar</button>
                 </div>
-                <span id="registro-span">¿Ya tienes una cuenta? <a href="/Web/login.html">Accede</a>.</span>
+                <span id="registro-span">¿Ya tienes una cuenta? <a href="/Web/login.php">Accede</a>.</span>
             </form>
         </div>
     </main>

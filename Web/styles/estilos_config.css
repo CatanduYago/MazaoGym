@@ -1,0 +1,37 @@
+
+h1{
+    font-family: 'Jaldi';
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: 300;
+    width:calc(100% - 20px);
+    background-color: var(--menu-background-color);
+    padding: 10px;
+    margin-top: 0;
+}
+#perfil-img:hover, #fotos-disponibles img:hover{
+    cursor: pointer;
+}
+
+#perfil-img{
+    width: 150px;
+}
+#fotos-disponibles img{
+    width: 150px;
+    border: 2px solid var(--otro);
+    grid-template-rows: auto;
+}
+#perfil-div{
+    margin: 0;
+    padding: 0;
+    
+}
+#perfil-info{
+    margin: 15px;
+}
+p{
+    font-family: 'Jaldi';
+    color: #000000;
+    font-size: 20px;
+    font-weight: 300;
+}

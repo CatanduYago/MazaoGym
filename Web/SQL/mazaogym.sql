@@ -15,7 +15,7 @@ CREATE TABLE clientes (
     CORREO VARCHAR(100),
     DIRECCION VARCHAR(100),
     PAGOS DECIMAL(10, 2),
-    FOTO_PERFIL BLOB
+    FOTO_PERFIL VARCHAR(100)
 );
 
 -- Crear tabla clases

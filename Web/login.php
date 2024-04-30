@@ -65,22 +65,37 @@
 
         <div id="pag-principales">
             <!-- Links de las dinstintas paginas -->
-            <a href="/Web/index.html" class="menu-pag">Curso</a>
-            <a href="/Web/clases_entrenamientos.html" class="menu-pag">Clases y entrenamientos</a>
-            <a href="/Web/contacto.html" class="menu-pag">Contacto</a>
+            <a href="/Web/index.php" class="menu-pag">Curso</a>
+            <a href="/Web/clases_entrenamientos.php" class="menu-pag">Clases y entrenamientos</a>
+            <a href="/Web/contacto.php" class="menu-pag">Contacto</a>
         </div>
 
         <div id="sesion-div">
             <!-- Boton de inicio de unirse y apuntarse-->
             <a href="/Web/inscripcion" class="menu-pag" id="apuntate">Apuntate</a>
-            <a href="/Web/login.html" class="menu-pag">Accede</a>
+            <?php
+            session_start();
+            if (isset($_SESSION['username'])) {
+                echo '<div class="dropdown">';
+                echo '<button class="dropbtn">' . $_SESSION['username'] . '</button>';
+                echo '<div class="dropdown-content">';
+                echo '<a href="/Web/configuracion.php">Configuración de Perfil</a>';
+                echo '<a href="#">Ayuda</a>';
+                echo '<a href="/Web/php/logout.php">Cerrar Sesión</a>';
+                echo '</div>';
+                echo '</div>';
+            } else {
+                echo '<a href="/Web/login.php" class="menu-pag">Accede</a>';
+            }
+            ?>
         </div>
+        
     </header>
     <main>
         <!-- -->
         <img src="/Web/img/fondo.avif" id="fondo_login">
         <div id="div_padre">
-            <form method="post" action="/Administrador_/USUARIOS/PHP/registro.php" id="div_centro">
+            <form method="post" action="/Web/php/iniciosesion.php" id="div_centro">
 
                 <h1>Iniciar sesión</h1>
                 <span class="span-inputs">Usuario</span>
