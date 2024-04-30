@@ -1,15 +1,3 @@
-h1 {
-    font-family: 'JetBrains';
-    color: #ffffff;
-    font-size: 25px;
-    font-weight: 300;
-    width: calc(100% - 20px);
-    background-color: var(--menu-background-color);
-    padding: 10px;
-    margin-top: 0;
-    text-transform: uppercase;
-}
-
 #perfil-img:hover,
 #fotos-disponibles img:hover {
     cursor: pointer;
@@ -27,11 +15,27 @@ h1 {
 }
 
 #perfil-div {
-    margin: 0;
     padding: 0;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     grid-gap: 20px;
+    background-color: var(--otro2);
+    width: 65%;
+    height: 900px;
+    margin-bottom: 100px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 5px 5px 10px #000000b3;
+    backdrop-filter: blur(10px);
+}
+
+#bienvenido,
+span {
+    font-family: 'Jaldi';
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 300;
 }
 
 #perfil-info {
@@ -42,9 +46,42 @@ h1 {
     margin: 15px;
 }
 
+.span-desc-perfil {
+    font-size: 15px;
+}
+
 p {
     font-family: 'Jaldi';
-    color: #000000;
-    font-size: 20px;
+    color: #ffffff;
+    font-size: 25px;
     font-weight: 300;
+    width: 300px;
+}
+
+input {
+    width: 250px;
+    height: auto;
+    font-family: 'Jaldi';
+    background-color: var(--otro);
+    border: none;
+    padding: 5px;
+}
+
+input:focus {
+    outline: none;
+    transition: 0.3s;
+    box-shadow: 2px 2px 5px var(--body-background-color);
+}
+
+.botones-form {
+    width: 80px;
+    text-transform: uppercase;
+    margin-right: 18%;
+    margin-top: 5%;
+}
+
+.botones-form:hover {
+    background-color: var(--body-background-color);
+    color: white;
+    cursor: pointer;
 }

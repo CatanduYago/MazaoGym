@@ -36,11 +36,11 @@ mysqli_close($conn);
     <title>Configuración de perfil</title>
     <link rel="stylesheet" href="/Web/styles/estilos_general.css">
     <link rel="stylesheet" href="/Web/styles/estilos_config.css">
-    <link rel="icon" href="/Web/img/logo2.png">    
+    <link rel="icon" href="/Web/img/logo2.png">
 </head>
 
 <body>
-<header id="nav-menu">
+    <header id="nav-menu">
         <div id="logo-div">
             <img src="/Web/img/logo2.png" id="logo-pequeño">
         </div>
@@ -73,35 +73,52 @@ mysqli_close($conn);
 
     </header>
     <main>
-    <h1>Configuración de perfil</h1>
 
-    <div id="perfil-div">
+        <div id="perfil-div">
 
-        <div id="perfil-info">
-        <p>Foto de perfil</p>
-            <?php
-            echo '<img src="/Web/img/perfil/' . $foto_perfil . '" id="perfil-img">';
-            ?>
-            <div id="fotos-disponibles" style="display: none;">
-                <?php
-                $directorio_fotos = "/Web/img/perfil/";
+            <div id="perfil-info">
+                <p>Foto de perfil</p>
+                <?php       
+                echo '<p id= "bienvenido"> Bienvenido, ' . $_SESSION['username'] . '.</p>';
 
-                $archivos = scandir($_SERVER['DOCUMENT_ROOT'] . $directorio_fotos);
-
-                foreach ($archivos as $archivo) {
-                    if ($archivo != '.' && $archivo != '..') {
-                        echo '<img src="' . $directorio_fotos . $archivo . '" class="miniatura" onclick="seleccionarFoto(\'' . $archivo . '\')"> ';
-                    }
-                }
+                echo '<img src="/Web/img/perfil/' . $foto_perfil . '" id="perfil-img">';
                 ?>
+                <div id="fotos-disponibles" style="display: none;">
+                    <?php
+                    $directorio_fotos = "/Web/img/perfil/";
+
+                    $archivos = scandir($_SERVER['DOCUMENT_ROOT'] . $directorio_fotos);
+
+                    foreach ($archivos as $archivo) {
+                        if ($archivo != '.' && $archivo != '..') {
+                            echo '<img src="' . $directorio_fotos . $archivo . '" class="miniatura" onclick="seleccionarFoto(\'' . $archivo . '\')"> ';
+                        }
+                    }
+                    ?>
+                </div>
+            </div>
+            <div id="perfil-desc">
+                <p>Configuración del perfil</p>
+                <span>Añade tus datos </span>
+                <form action="/Web/php/añade_datos.php">
+                    <span class ="span-desc-perfil" >Añade tu dirección</span>
+                    <input type="text" placeholder="Dirección">
+                    <input type="submit" class="botones-form" value="Agregar">  
+                    <input type="reset" class="botones-form" value="Cancelar">
+
+                </form>
+                <span>Cambia tu nombre de usuario</span>
+                <form action="/Web/php/cambia_nombre.php">
+                    <span class ="span-desc-perfil">Introduce tu nuevo usuario:</span>
+                    <input type="text" placeholder="Nuevo usuario" size="20" >
+                    <input type="submit" class="botones-form" value="Cambiar"> 
+                    <input type="reset" class="botones-form" value="Cancelar">
+
+                </form>
             </div>
         </div>
-        <div id="perfil-desc">
-            <p>Achuu</p>
-        </div>
-    </div>
 
-    <script>
+        <script>
             window.onload = function() {
                 var perfilImg = document.getElementById("perfil-img");
                 var fotosDisponibles = document.getElementById("fotos-disponibles");
@@ -125,7 +142,7 @@ mysqli_close($conn);
                 xhr.send("foto=" + nombreFoto);
             }
         </script>
-        </main>
+    </main>
 
 </body>
 
