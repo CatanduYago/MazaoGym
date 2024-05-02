@@ -82,6 +82,21 @@ input:focus {
 
 .botones-form:hover {
     background-color: var(--body-background-color);
-    color: white;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#boton-baja {
+    width: auto;
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-right: 18%;
+    margin-top: 5%;
+    background: none;
+    color: #ffffff;
+}
+
+#boton-baja:hover {
+    color: #cfcfcf;
     cursor: pointer;
 }
