@@ -108,13 +108,13 @@ mysqli_close($conn);
 
                 </form><br><br>
                 <span>Cambia tu nombre de usuario</span>
-                <form action="/Web/php/cambia_nombre.php">
+                <form action="/Web/php/cambia_nombre.php" method="post">
                     <span class ="span-desc-perfil">Introduce tu nuevo usuario:</span>
-                    <input type="text" placeholder="Nuevo usuario" size="20" >
+                    <input type="text" placeholder="Nuevo usuario" size="20" name="nuevo_usuario">
                     <input type="submit" class="botones-form" value="Cambiar"> 
                     <input type="reset" class="botones-form" value="Cancelar">
                 </form><br><br><br><br><br>
-                <form action="/Web/php/baja_usuario.php">
+                <form action="/Web/php/baja_usuario.php" method="post">
                 <input type="submit" id="boton-baja" value="Darse de baja en MazaoGym"> 
                 </form>
             </div>

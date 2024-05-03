@@ -54,7 +54,7 @@ body::-webkit-scrollbar-thumb {
     text-transform: uppercase;
     color: #ffffff;
     padding: 10px;
-    font-size: clamp(12px, 1vw, 15px);
+    font-size: clamp(15px, 1vw, 20px);
     margin: 10px;
 }
 
@@ -181,7 +181,6 @@ footer {
 #copyright {
     margin-top: 10%;
 }
-/* Estilos para el desplegable */
 .dropdown {
     position: relative;
     display: inline-block;

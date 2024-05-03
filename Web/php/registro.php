@@ -20,6 +20,7 @@ $sql = "INSERT INTO clientes (DNI, NOMBRE, NOMBRE_USUARIO, APELLIDOS, CORREO, TE
 $r = mysqli_query($conn, $sql);
 
 if ($r) {
+    session_start();
     $_SESSION['username'] = $nombreUsuario;
     header("Location: /Web/index.php");
     exit();
@@ -27,4 +28,3 @@ if ($r) {
     header("Location: /Web/registro.html");
     exit();
 }
-

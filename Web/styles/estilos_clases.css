@@ -1,0 +1,45 @@
+main {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+#links-principales {
+    margin-top: 20px;
+}
+
+#links-principales a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: var(--otro2);
+    font-family: 'Jaldi';
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-weight: bold;
+}
+#links-principales a:hover, .menu-pag.active
+{
+    color: var(--menu-background-color);
+    border-bottom: 2px solid var(--otro2);
+}
+
+
+.contenido-div {
+    display: none;
+    text-align: left; 
+    margin-left: 50px; 
+    margin-right: 50px;
+    font-size: 17px;
+    
+}
+.contenido-div p {
+    font-family: 'Jaldi';
+
+}
+
+.activo {
+    display: block !important;
+}
