@@ -1,10 +1,10 @@
-# MazaoGym
+# Proyecto de Entornos de Desarrollo: MazaoGym
 
-El proyecto del sitio web "MazaoGym" se centra en proporcionar una plataforma interactiva donde los usuarios puedan acceder a información relevante sobre el gimnasio, como horarios de clases, detalles de entrenamientos, y datos importantes. Además, permitirá a los usuarios inscribirse en clases y entrenamientos de manera conveniente y eficiente.
+  El proyecto del sitio web "MazaoGym" se centra en proporcionar una plataforma interactiva donde los usuarios puedan acceder a información relevante sobre el gimnasio, como horarios de clases, detalles de entrenamientos, y datos importantes. Además, permitirá a los usuarios inscribirse en clases y entrenamientos de manera conveniente y eficiente.
 
 ### Objetivos del Proyecto:
 
-El principal objetivo de “MazaoGym” es proporcionar una plataforma centrada en el usuario que permita a los clientes y al personal del gimnasio acceder y administrar información de manera eficiente. 
+  El principal objetivo de “MazaoGym” es proporcionar una plataforma centrada en el usuario que permita a los clientes y al personal del gimnasio acceder y administrar información de manera eficiente. 
 
 ## Equipo y herramientas de trabajo
 
