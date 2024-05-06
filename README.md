@@ -8,22 +8,26 @@
 
 ## Equipo y herramientas de trabajo
 
-  Equipo del proyecto:
+  #### Equipo del proyecto:
 
-- Jefe de Proyecto: *Ismael Pavón*
-- Analistas de Sistemas: *Kevin González* y *David Roncero*
-- Diseñador de Interfaz de Usuario (UI/UX): *Yago Catalano* 
-- Desarrollador Full-Stack: *Yago Catalano* 
-- Programador: *Ismael Pavón*
-- Gestor de Base de Datos: *Alejandro Gonzalez*
-- Tester: *Abel Jimenez*
+- Jefe de Proyecto: **Ismael Pavón**.
+- Analistas de Sistemas: **Kevin González** y **David Roncero**.
+- Diseñador de Interfaz de Usuario (UI/UX): **Yago Catalano**.
+- Desarrollador Full-Stack: **Yago Catalano**. 
+- Programador: **Ismael Pavón**.
+- Gestor de Base de Datos: **Alejandro Gonzalez**.
+- Tester: **Abel Jimenez**.
 
-  Herramientas de trabajo:
+  #### Herramientas de trabajo:
 
-- Frontend: HTML5, CSS3, JavaScript.
-- Backend: MySQL, PHP.
-- Herramientas de Desarrollo: GitHub, VS Code.
+- Frontend: **HTML5**, **CSS3**, **JavaScript**.
+- Backend: **MySQL**, **PHP**.
+- Herramientas de Desarrollo: **GitHub**, **VS Code**.
 
+
+## Despliegue Web
+
+  La página puede encontrarse [aquí]()
 
 ## Bibliografía
 
