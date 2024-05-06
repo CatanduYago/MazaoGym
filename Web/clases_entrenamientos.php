@@ -49,7 +49,7 @@
         <div id="links-principales">
             <!-- Enlaces para seleccionar Clases o Entrenamientos personales -->
             <a href="#" class="menu-pag active" id="link-clases">Clases</a>
-            <a href="#" class="menu-pag" id="link-entrenamientos">Entrenamientos Personales</a>
+            <a href="#" class="menu-pag" id="link-entrenamientos" >Entrenamientos Personales</a>
         </div>
         <!-- Divs para Clases y Entrenamientos personales -->
         <div id="clases" class="contenido-div activo">

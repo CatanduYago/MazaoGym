@@ -20,24 +20,23 @@ h2 {
     font-size: 20px;
     font-weight: bold;
 }
-#links-principales a:hover, .menu-pag.active
-{
+
+#links-principales a:hover,
+.menu-pag.active {
     color: var(--menu-background-color);
     border-bottom: 2px solid var(--otro2);
 }
 
-
 .contenido-div {
     display: none;
-    text-align: left; 
-    margin-left: 50px; 
+    text-align: left;
+    margin-left: 50px;
     margin-right: 50px;
     font-size: 17px;
-    
 }
+
 .contenido-div p {
     font-family: 'Jaldi';
-
 }
 
 .activo {
