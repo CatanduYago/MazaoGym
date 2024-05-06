@@ -8,7 +8,7 @@
 
 ## Equipo y herramientas de trabajo
 
-  #### Equipo del proyecto:
+ #### Equipo del proyecto:
 
 - Jefe de Proyecto: **Ismael Pavón**.
 - Analistas de Sistemas: **Kevin González** y **David Roncero**.
@@ -18,7 +18,7 @@
 - Gestor de Base de Datos: **Alejandro Gonzalez**.
 - Tester: **Abel Jimenez**.
 
-  #### Herramientas de trabajo:
+ #### Herramientas de trabajo:
 
 - Frontend: **HTML5**, **CSS3**, **JavaScript**.
 - Backend: **MySQL**, **PHP**.
