@@ -60,7 +60,7 @@
                     <img src="/Web/img/spinning.png" alt="">
                     <div class="texto"> <!-- Aquí se agrega el div para el texto -->
                         <p>Únete a nuestra clase de spinning para un entrenamiento cardiovascular intenso. Quema calorías y mejora tu resistencia mientras pedaleas al ritmo de la música.</p>
-                        <button class="botones-form" onclick="mostrarFormulario('Spinning')">¡Reservar ahora!</button>
+                        <button class="botones-form" >¡Reservar ahora!</button>
                     </div>
                 </div>
 
@@ -69,7 +69,7 @@
                     <img src="/Web/img/aerobic.png" alt="">
                     <div class="texto"> <!-- Aquí se agrega el div para el texto -->
                         <p>Disfruta de una sesión energizante de aeróbic. Con coreografías divertidas y música motivadora, esta clase te ayudará a tonificar y fortalecer tu cuerpo mientras te diviertes.</p>
-                        <button class="botones-form" onclick="mostrarFormulario('Aeróbic')">¡Reservar ahora!</button>
+                        <button class="botones-form" >¡Reservar ahora!</button>
                     </div>
                 </div>
 
@@ -78,7 +78,7 @@
                     <img src="/Web/img/body-pump.png" alt="">
                     <div class="texto"> <!-- Aquí se agrega el div para el texto -->
                         <p>Desarrolla fuerza y tonifica tus músculos con nuestra clase de Body Pump. Utilizando barras y pesas, trabajarás todo el cuerpo para lograr resultados visibles.</p>
-                        <button class="botones-form" onclick="mostrarFormulario('Body Pump')">¡Reservar ahora!</button>
+                        <button class="botones-form">¡Reservar ahora!</button>
                     </div>
                 </div>
 
@@ -87,7 +87,7 @@
                     <img src="/Web/img/crossfit.png" alt="">
                     <div class="texto"> <!-- Aquí se agrega el div para el texto -->
                         <p>¡Ponte en forma con nuestro entrenamiento de CrossFit! Combina levantamiento de pesas, ejercicios de cardio y movimientos funcionales para un entrenamiento completo y desafiante.</p>
-                        <button class="botones-form" onclick="mostrarFormulario('CrossFit')">¡Reservar ahora!</button>
+                        <button class="botones-form" >¡Reservar ahora!</button>
                     </div>
                 </div>
 
@@ -96,7 +96,7 @@
                     <img src="/Web/img/yoga.png" alt="">
                     <div class="texto"> <!-- Aquí se agrega el div para el texto -->
                         <p>Encuentra equilibrio y paz interior con nuestra clase de yoga. Aprende técnicas de respiración y posturas que mejorarán tu flexibilidad, fuerza y tranquilidad mental.</p>
-                        <button class="botones-form" onclick="mostrarFormulario('Yoga')">¡Reservar ahora!</button>
+                        <button class="botones-form">¡Reservar ahora!</button>
                     </div>
                 </div>
 
@@ -105,14 +105,41 @@
                     <img src="/Web/img/pilates.png" alt="">
                     <div class="texto"> <!-- Aquí se agrega el div para el texto -->
                         <p>Fortalece tu núcleo y mejora tu postura con Pilates. Esta clase se centra en el control del cuerpo y la alineación para obtener resultados duraderos.</p>
-                        <button class="botones-form" onclick="mostrarFormulario('Pilates')">¡Reservar ahora!</button>
+                        <button class="botones-form">¡Reservar ahora!</button>
                     </div>
                 </div>
             </div>
         </div>
         <div id="entrenamientos" class="contenido-div">
             <!-- Contenido de Entrenamientos -->
-            <p>Descripción de los entrenamientos personales...</p>
+            <div id="entrenamientos-grid">
+                <div class="entrenamiento">
+                    <h3>Entrenamiento Funcional</h3>
+                    <img src="/Web/img/entrenamiento-funcional.png" alt="">
+                    <div class="texto">
+                        <p>Programa de ejercicios diseñado para mejorar la fuerza, la resistencia y la flexibilidad mediante movimientos naturales del cuerpo.</p>
+                        <button class="botones-form">¡Reservar ahora!</button>
+                    </div>
+                </div>
+
+                <div class="entrenamiento">
+                    <h3>Entrenamiento HIIT</h3>
+                    <img src="/Web/img/entrenamiento-hiit.png" alt="">
+                    <div class="texto">
+                        <p>Entrenamiento de intervalos de alta intensidad que combina ejercicios cardiovasculares con ejercicios de fuerza. ¡Quema grasa y mejora tu condición física en poco tiempo!</p>
+                        <button class="botones-form">¡Reservar ahora!</button>
+                    </div>
+                </div>
+
+                <div class="entrenamiento">
+                    <h3>Boxeo Fitness</h3>
+                    <img src="/Web/img/boxeo.png" alt="">
+                    <div class="texto">
+                        <p>Combina ejercicios de boxeo con ejercicios de condición física para mejorar tu resistencia cardiovascular, tonificar tus músculos y liberar estrés.</p>
+                        <button class="botones-form">¡Reservar ahora!</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </main>
@@ -144,10 +171,7 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d652.9965703877186!2d-6.9806870269362005!3d38.87383348440964!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1712772750511!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="localizacion"></iframe>
     </footer>
     <script>
-        function mostrarFormulario(clase) {
-            document.getElementById('clase').value = clase;
-            document.getElementById('formulario').style.display = 'block';
-        }
+        
 
         document.getElementById("link-clases").addEventListener("click", function() {
             document.getElementById("clases").classList.add("activo");
