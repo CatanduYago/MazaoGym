@@ -1,0 +1,107 @@
+main {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    background-color: var(--otro2);
+    padding: 5px;
+    margin: 50px;
+    align-items: start;
+    color: white;
+    font-family: 'Jaldi';
+    box-shadow: 5px 5px 10px #000000b3;
+    width: 50%;
+}
+
+th,h4 {
+    font-family: 'Jetbrains';
+    text-transform: uppercase;
+    padding: 5px;
+    color: white;
+    font-weight: normal;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 15px;
+}
+
+td {
+    padding: 15px;
+    margin: 10px;
+}
+
+td ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+td ul a {
+    text-decoration: none;
+    color: white;
+}
+
+td ul li img {
+    padding: 5px;
+    width: 20px;
+    padding: 11px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+td img {
+    width: 20px;
+    vertical-align: middle;
+    padding: 10px;
+}
+
+table input,
+table textarea {
+    width: 50%; 
+    height: auto;
+    font-family: 'Jaldi';
+    background-color: var(--otro);
+    border: none;
+    padding: 5px;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+table select{
+    width: auto;
+    height: auto;
+    font-family: 'Jaldi';
+    background-color: var(--otro);
+    border: none;
+    padding: 5px;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+
+table textarea {
+    height: 150px;
+}
+#terminos{
+    width: auto;
+}
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    transition: 0.3s;
+    box-shadow: 2px 2px 5px var(--body-background-color);
+}
+
+.botones-form {
+    width: 20%;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin: auto;
+}
+
+.botones-form:hover {
+    background-color: var(--body-background-color);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in, color 0.4s ease-in;
+}

@@ -47,14 +47,14 @@ mysqli_close($conn);
 
         <div id="pag-principales">
             <!-- Links de las dinstintas paginas -->
-            <a href="/Web/index.php" class="menu-pag">Curso</a>
+            <a href="/Web/index.php" class="menu-pag">Inicio</a>
             <a href="/Web/clases_entrenamientos.php" class="menu-pag">Clases y entrenamientos</a>
             <a href="/Web/contacto.php" class="menu-pag">Contacto</a>
         </div>
 
         <div id="sesion-div">
             <!-- Boton de inicio de unirse y apuntarse-->
-            <a href="/Web/inscripcion" class="menu-pag" id="apuntate">Apuntate</a>
+            <a href="/Web/inscripcion.php" class="menu-pag" id="apuntate">Apuntate</a>
             <?php
             if (isset($_SESSION['username'])) {
                 echo '<div class="dropdown">';

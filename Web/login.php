@@ -65,7 +65,7 @@
 
         <div id="pag-principales">
             <!-- Links de las dinstintas paginas -->
-            <a href="/Web/index.php" class="menu-pag">Curso</a>
+            <a href="/Web/index.php" class="menu-pag">Inicio</a>
             <a href="/Web/clases_entrenamientos.php" class="menu-pag">Clases y entrenamientos</a>
             <a href="/Web/contacto.php" class="menu-pag">Contacto</a>
         </div>

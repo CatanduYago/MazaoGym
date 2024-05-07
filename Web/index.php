@@ -19,14 +19,14 @@
 
         <div id="pag-principales">
             <!-- Links de las dinstintas paginas -->
-            <a href="/Web/index.php" class="menu-pag">Curso</a>
+            <a href="/Web/index.php" class="menu-pag">Inicio</a>
             <a href="/Web/clases_entrenamientos.php" class="menu-pag">Clases y entrenamientos</a>
             <a href="/Web/contacto.php" class="menu-pag">Contacto</a>
         </div>
 
         <div id="sesion-div">
             <!-- Boton de inicio de unirse y apuntarse-->
-            <a href="/Web/inscripcion" class="menu-pag" id="apuntate">Apuntate</a>
+            <a href="/Web/inscripcion.php" class="menu-pag" id="apuntate">Apuntate</a>
             <?php
             session_start();
             if (isset($_SESSION['username'])) {
@@ -90,7 +90,7 @@
                     ¡Estamos aquí para ayudarte a alcanzar tus objetivos y convertirte en la mejor versión de ti
                     mismo!</b></p>
         </div>
-        <a href="/Web/inscripcion" id="inscribete">Inscríbete ahora</a>
+        <a href="/Web/inscripcion.php" id="inscribete">Inscríbete ahora</a>
     </main>
     <footer>
         <!-- 3 divs en flex direction row-->

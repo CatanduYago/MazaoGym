@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Jaldi';
     margin: 0;
     padding: 0;
     background-color: var(--body-background-color);
@@ -28,7 +28,7 @@ section {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 2rem;
-    width: 45%;
+    width: 25%;
     margin: 0 auto;
 }
 
@@ -58,16 +58,10 @@ h2 {
     background-color: #555;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+form{
+    margin: 0;
+    display: grid;
 }
-
 label {
     display: block;
     margin-bottom: 0.5rem;
@@ -75,7 +69,7 @@ label {
 }
 
 input[type="text"],[type="number"],[type="email"] {
-    width: 90%;
+    width: 30%;
     padding: 0.5rem;
     margin-bottom: 1rem;
     border: 1px solid #ccc;

@@ -19,14 +19,14 @@
 
         <div id="pag-principales">
             <!-- Links de las dinstintas paginas -->
-            <a href="/Web/index.php" class="menu-pag">Curso</a>
+            <a href="/Web/index.php" class="menu-pag">Inicio</a>
             <a href="/Web/clases_entrenamientos.php" class="menu-pag">Clases y entrenamientos</a>
             <a href="/Web/contacto.php" class="menu-pag">Contacto</a>
         </div>
 
         <div id="sesion-div">
             <!-- Boton de inicio de unirse y apuntarse-->
-            <a href="/Web/inscripcion" class="menu-pag" id="apuntate">Apuntate</a>
+            <a href="/Web/inscripcion.php" class="menu-pag" id="apuntate">Apuntate</a>
             <?php
             session_start();
             if (isset($_SESSION['username'])) {
@@ -60,7 +60,7 @@
                     <img src="/Web/img/spinning.png" alt="">
                     <div class="texto"> <!-- Aquí se agrega el div para el texto -->
                         <p>Únete a nuestra clase de spinning para un entrenamiento cardiovascular intenso. Quema calorías y mejora tu resistencia mientras pedaleas al ritmo de la música.</p>
-                        <button class="botones-form" >¡Reservar ahora!</button>
+                        <button class="botones-form" ><a href="/Web/inscripcion.php">¡Reservar ahora!</a></button>
                     </div>
                 </div>
 
@@ -69,7 +69,7 @@
                     <img src="/Web/img/aerobic.png" alt="">
                     <div class="texto"> <!-- Aquí se agrega el div para el texto -->
                         <p>Disfruta de una sesión energizante de aeróbic. Con coreografías divertidas y música motivadora, esta clase te ayudará a tonificar y fortalecer tu cuerpo mientras te diviertes.</p>
-                        <button class="botones-form" >¡Reservar ahora!</button>
+                        <button class="botones-form" ><a href="/Web/inscripcion.php">¡Reservar ahora! </a></button>
                     </div>
                 </div>
 
@@ -78,7 +78,7 @@
                     <img src="/Web/img/body-pump.png" alt="">
                     <div class="texto"> <!-- Aquí se agrega el div para el texto -->
                         <p>Desarrolla fuerza y tonifica tus músculos con nuestra clase de Body Pump. Utilizando barras y pesas, trabajarás todo el cuerpo para lograr resultados visibles.</p>
-                        <button class="botones-form">¡Reservar ahora!</button>
+                        <button class="botones-form"> <a href="/Web/inscripcion.php">¡Reservar ahora! </a></button>
                     </div>
                 </div>
 
@@ -87,7 +87,7 @@
                     <img src="/Web/img/crossfit.png" alt="">
                     <div class="texto"> <!-- Aquí se agrega el div para el texto -->
                         <p>¡Ponte en forma con nuestro entrenamiento de CrossFit! Combina levantamiento de pesas, ejercicios de cardio y movimientos funcionales para un entrenamiento completo y desafiante.</p>
-                        <button class="botones-form" >¡Reservar ahora!</button>
+                        <button class="botones-form"> <a href="/Web/inscripcion.php">¡Reservar ahora! </a></button>
                     </div>
                 </div>
 
@@ -96,7 +96,7 @@
                     <img src="/Web/img/yoga.png" alt="">
                     <div class="texto"> <!-- Aquí se agrega el div para el texto -->
                         <p>Encuentra equilibrio y paz interior con nuestra clase de yoga. Aprende técnicas de respiración y posturas que mejorarán tu flexibilidad, fuerza y tranquilidad mental.</p>
-                        <button class="botones-form">¡Reservar ahora!</button>
+                        <button class="botones-form"> <a href="/Web/inscripcion.php">¡Reservar ahora! </a></button>
                     </div>
                 </div>
 
@@ -105,7 +105,7 @@
                     <img src="/Web/img/pilates.png" alt="">
                     <div class="texto"> <!-- Aquí se agrega el div para el texto -->
                         <p>Fortalece tu núcleo y mejora tu postura con Pilates. Esta clase se centra en el control del cuerpo y la alineación para obtener resultados duraderos.</p>
-                        <button class="botones-form">¡Reservar ahora!</button>
+                        <button class="botones-form"> <a href="/Web/inscripcion.php">¡Reservar ahora! </a></button>
                     </div>
                 </div>
             </div>
@@ -118,7 +118,7 @@
                     <img src="/Web/img/entrenamiento-funcional.png" alt="">
                     <div class="texto">
                         <p>Programa de ejercicios diseñado para mejorar la fuerza, la resistencia y la flexibilidad mediante movimientos naturales del cuerpo.</p>
-                        <button class="botones-form">¡Reservar ahora!</button>
+                        <button class="botones-form"> <a href="/Web/inscripcion.php">¡Reservar ahora! </a></button>
                     </div>
                 </div>
 
@@ -127,7 +127,7 @@
                     <img src="/Web/img/entrenamiento-hiit.png" alt="">
                     <div class="texto">
                         <p>Entrenamiento de intervalos de alta intensidad que combina ejercicios cardiovasculares con ejercicios de fuerza. ¡Quema grasa y mejora tu condición física en poco tiempo!</p>
-                        <button class="botones-form">¡Reservar ahora!</button>
+                        <button class="botones-form"> <a href="/Web/inscripcion.php">¡Reservar ahora! </a></button>
                     </div>
                 </div>
 
@@ -136,7 +136,7 @@
                     <img src="/Web/img/boxeo.png" alt="">
                     <div class="texto">
                         <p>Combina ejercicios de boxeo con ejercicios de condición física para mejorar tu resistencia cardiovascular, tonificar tus músculos y liberar estrés.</p>
-                        <button class="botones-form">¡Reservar ahora!</button>
+                        <button class="botones-form"> <a href="/Web/inscripcion.php">¡Reservar ahora! </a></button>
                     </div>
                 </div>
             </div>
