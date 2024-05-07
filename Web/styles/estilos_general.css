@@ -91,7 +91,7 @@ body::-webkit-scrollbar-thumb {
 #sesion-div #apuntate {
     background-color: var(--detalles-background-color);
     padding-top: 100%;
-    padding-bottom: 27px;
+    padding-bottom: 10%;
 }
 
 .nombre-seccion {

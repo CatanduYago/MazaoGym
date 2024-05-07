@@ -53,6 +53,7 @@ input {
     font-size: 14px;
     font-family: 'Jaldi';
     box-shadow: var(--body-background-color) 0px 0px 0px;
+    
 }
 
 input:focus {

@@ -1,9 +1,3 @@
--- Crear la base de datos
-CREATE DATABASE IF NOT EXISTS mazaogym;
-
--- Usar la base de datos
-USE mazaogym;
-
 -- Crear tabla clientes
 CREATE TABLE clientes (
     DNI VARCHAR(10) PRIMARY KEY,
