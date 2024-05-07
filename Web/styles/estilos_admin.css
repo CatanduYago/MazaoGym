@@ -1,0 +1,95 @@
+body {
+    font-family: 'Jaldi';
+    margin: 0;
+    padding: 0;
+    background-color: var(--body-background-color);
+    background-image: url(../img/logotransparente.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+header {
+    background-color: var(--otro2);
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 2rem 0;
+}
+
+section {
+    background-color: var(--otro);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 25%;
+    margin: 0 auto;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.consultas {
+    border-right: 2px solid #ccc;
+}
+
+.consulta {
+    margin-bottom: 1.5rem;
+}
+
+.boton {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--menu-background-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+    background-color: var(--otro2);
+}
+
+form{
+    margin: 0;
+    display: grid;
+}
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input[type="text"],[type="number"],[type="email"] {
+    width: 30%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: var(--otro2);
+    color: var(--otro);
+
+}
+
+input[type="submit"] {
+    background-color: var(--menu-background-color);
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--otro2);
+    
+}

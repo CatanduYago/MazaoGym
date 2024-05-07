@@ -1,0 +1,98 @@
+#carousel {
+    position: relative;
+    max-width: 750px;
+    margin: auto;
+    text-align: center;
+    padding: 1rem;
+}
+
+.carousel-slide {
+    display: none;
+    padding-bottom: 0;
+    transition: width 0.3s ease;
+}
+
+.carousel-slide img {
+    width: 750px;
+    height: 450px;
+}
+
+.active {
+    display: block;
+}
+
+.barra-progreso {
+    width: 20%;
+    background-color: var(--otro);
+    height: 8px;
+    border-radius: 15px;
+    align-items: center;
+    margin-left: 40%;
+    margin-top: 10px;
+}
+
+.progreso {
+    background-color: var(--otro2);
+    height: 100%;
+    width: 0;
+    text-align: center;
+    transition: width 0.3s ease;
+    border-radius: 20px;
+}
+
+#cuerpo {
+    max-width: clamp(300px, 80%, 1000px);
+    text-align: center;
+    margin: 0 auto;
+}
+
+#cuerpo p {
+    font-size: 20px;
+}
+
+p,
+span {
+    font-family: 'Jaldi';
+    font-size: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-align: justify;
+}
+
+#inscribete {
+    background-color: var(--detalles-background-color);
+    border: 0;
+    padding: 12px;
+    float: right;
+    margin-right: 25%;
+    text-transform: uppercase;
+    font-family: 'Jaldi';
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+main {
+    margin-bottom: 10%;
+}
+
+.puntos {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.punto {
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    background-color: var(--otro);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.punto.active {
+    background-color: var(--otro2);
+}

@@ -1,0 +1,227 @@
+@font-face {
+    font-family: 'Jetbrains';
+    src: url('/Web/fonts/JetBrainsMono-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Jaldi';
+    src: url('/Web/fonts/Jaldi-Regular.ttf') format('truetype');
+}
+
+:root {
+    --otro: #E0FBFC;
+    --menu-background-color: #293241;
+    --detalles-background-color: #EE6C4D;
+    --body-background-color: #98C1D9;
+    --otro2: #3D5A80;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--body-background-color);
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--detalles-background-color);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--otro2);
+    ;
+    border-radius: 0px;
+}
+
+#nav-menu {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--menu-background-color);
+    width: auto;
+    height: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav-menu a {
+    font-family: 'Jetbrains';
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 10px;
+    font-size: clamp(15px, 1vw, 20px);
+    margin: 10px;
+}
+
+#nav-menu a:hover {
+    color: #d1d1d1;
+}
+
+#sesion-div #apuntate:hover {
+    color: #000000;
+}
+
+#logo-div {
+    max-width: 35px;
+}
+
+#logo-pequeño {
+    width: clamp(30px, 5vw, 50px);
+    padding: 10px;
+    margin: 0;
+}
+
+#sesion-div {
+    align-items: end;
+    float: right;
+    height: 100%;
+}
+
+#pag-principales {
+    display: flex;
+    float: left;
+    justify-content: space-between;
+}
+
+#sesion-div #apuntate {
+    background-color: var(--detalles-background-color);
+    padding-top: 100%;
+    padding-bottom: 10%;
+}
+
+.nombre-seccion {
+    font-family: 'Jetbrains';
+    margin-left: 0;
+}
+
+footer {
+    background-color: var(--menu-background-color);
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    bottom: 0;
+    margin-top: 20%;
+    height: 340px;
+}
+
+#links-footer-div,
+#encuentra-footer-div {
+    width: clamp(250px, 30%, 480px);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    height: 300px;
+    align-items: center;
+}
+
+#links-footer-div {
+    align-items: center;
+    font-family: 'Jaldi';
+}
+
+#contacto-footer-div {
+    display: flex;
+    flex-direction: column;
+    width: clamp(250px, 30%, 500px);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    height: 300px;
+    align-items: start;
+}
+
+#contacto-footer-div a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Jaldi';
+    font-size: 18px;
+    padding: 5px;
+}
+
+#contacto-footer-div img {
+    width: 20px;
+    vertical-align: middle;
+}
+
+.icono-contacto {
+    width: 18px;
+}
+
+.logo-redsocial {
+    width: 20px;
+    padding: 5px;
+}
+
+.redsocial {
+    float: right;
+    padding: 5px;
+    align-self: end;
+    margin-right: 65%;
+}
+
+#logo-grande {
+    width: 100px;
+    padding-top: 15%;
+}
+
+#localizacion {
+    width: 450px;
+    height: 230px;
+}
+
+#calle {
+    float: right;
+}
+
+#copyright {
+    margin-top: 10%;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    font-family: 'Jetbrains'; 
+
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--menu-background-color); 
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    font-family: 'Jetbrains'; 
+    right: 0;
+    left: calc(100% - 145px);
+    max-width: calc(100% - 100px);
+
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Jetbrains'; 
+    
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn {
+    background: none;
+    color: white;
+    padding: 25px;
+    font-size: clamp(12px, 1vw, 15px);
+    border: none;
+    cursor: pointer;
+    font-family: 'Jetbrains'; 
+    height: auto;
+}

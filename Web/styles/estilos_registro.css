@@ -1,0 +1,142 @@
+:root {
+    --otro: #E0FBFC;
+    --menu-background-color: #293241;
+    --detalles-background-color: #EE6C4D;
+    --body-background-color: #98C1D9;
+    --otro2: #3D5A80;
+}
+
+#div_padre {
+    display: grid;
+    place-items: center;
+    height: 700px;
+    justify-content: center;
+}
+
+#fondo_login {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    filter: blur(5px);
+}
+
+#div_centro {
+    margin: 20% auto;
+    border: 2px transparent;
+    bottom: 0;
+    padding: 5px;
+    display: grid;
+    place-items: center;
+    background: transparent;
+    background: var(--otro2);
+    box-shadow: 5px 5px 10px #000000b3;
+    backdrop-filter: blur(10px);
+    width: 500px;
+    height: auto;
+    transition: 0.5s;
+}
+
+input {
+    text-align: left;
+    background-color: var(--otro);
+    border: 1px solid var(--otro2);
+    font-size: 18px;
+    font-weight: 200;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 0;
+    width: 300px;
+    height: 25px;
+    transition: 1.2s;
+    font-size: 14px;
+    font-family: 'Jaldi';
+    box-shadow: var(--body-background-color) 0px 0px 0px;
+    
+}
+
+input:focus {
+    border: 1px solid var(--otro);
+    transition: 0.5s;
+    outline: none;
+    box-shadow: var(--otro) 1px 1px 5px;
+}
+
+h1 {
+    margin-top: 20px;
+    color: #ffffff;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 25px;
+    font-family: 'Jetbrains';
+}
+
+.btn_lgn,
+.btn_lgn2 {
+    border: 2px solid transparent;
+    background: var(--menu-background-color);
+    color: #ffffff;
+    font-size: 15px;
+    padding: 10px 0;
+    text-decoration: none;
+    text-shadow: none;
+    display: block;
+    width: 100px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Jaldi';
+    transition: 0.5s;
+}
+
+.btn_lgn:hover,
+.btn_lgn2:hover {
+    background-color: var(--body-background-color);
+    color: black;
+    box-shadow: var(--body-background-color) 1px 1px 5px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#botons {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+}
+
+#botons button {
+    margin: 30px;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+#registro-span,
+#registro-span a {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    font-family: 'Jaldi';
+    transition: 0.3s;
+}
+
+#registro-span a:hover {
+    transition: 0.3s;
+    text-shadow: var(--body-background-color) 2px 0px 5px;
+}
+
+.span-inputs {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: 'Jaldi';
+    margin: 5px; 
+    margin-bottom:0 ;
+    text-align: left; 
+    width: 64%;
+
+}

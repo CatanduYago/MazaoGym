@@ -1,0 +1,67 @@
+CREATE DATABASE IF NOT EXISTS mazaogym;
+
+-- Usar la base de datos
+USE mazaogym;
+
+-- Crear tabla clientes
+CREATE TABLE clientes (
+    DNI VARCHAR(10) PRIMARY KEY,
+    NOMBRE VARCHAR(50),
+    NOMBRE_USUARIO VARCHAR(100) UNIQUE,
+    CONTRASENIA VARCHAR(120),
+    APELLIDOS VARCHAR(50),
+    TELEFONO VARCHAR(15),
+    CORREO VARCHAR(100),
+    DIRECCION VARCHAR(100),
+    PAGOS DECIMAL(10, 2),
+    FOTO_PERFIL VARCHAR(100)
+);
+
+-- Crear tabla clases
+CREATE TABLE clases (
+    ID INT PRIMARY KEY AUTO_INCREMENT,
+    NOMBRE VARCHAR(50),
+    DESCRIPCION TEXT
+);
+
+-- Crear tabla entrenamien-- Crear la base de datos
+to
+CREATE TABLE entrenamiento (
+    ID INT PRIMARY KEY AUTO_INCREMENT,
+    NOMBRE VARCHAR(50),
+    DESCRIPCION TEXT
+);
+
+-- Crear tabla empleados
+CREATE TABLE empleados (
+    ID_EMPLEADO INT PRIMARY KEY AUTO_INCREMENT,
+    NOMBRE VARCHAR(50),
+    APELLIDOS VARCHAR(100),
+    DNI VARCHAR(10),
+    TELEFONO VARCHAR(15),
+    CORREO VARCHAR(100),
+    UBICACION VARCHAR(100),
+    SUELDO DECIMAL(10, 2),
+    HORARIO VARCHAR(50),
+    CONTRASENIA VARCHAR(50)
+);
+
+-- Crear tabla relacion_clientes_clases_entrenamiento
+CREATE TABLE relacion_clientes_clases_entrenamiento (
+    DNI_CLIENTE VARCHAR(10),
+    ID_CLASES INT,
+    ID_ENTRENAMIENTO INT,
+    FOREIGN KEY (DNI_CLIENTE) REFERENCES clientes(DNI) ON DELETE CASCADE,
+    FOREIGN KEY (ID_CLASES) REFERENCES clases(ID),
+    FOREIGN KEY (ID_ENTRENAMIENTO) REFERENCES entrenamiento(ID)
+);
+
+-- Crear tabla relacion_empleados_clases_entrenamiento
+CREATE TABLE relacion_empleados_clases_entrenamiento (
+    ID_EMPLEADO INT,
+    ID_CLASES INT,
+    ID_ENTRENAMIENTO INT,
+    FOREIGN KEY (ID_EMPLEADO) REFERENCES empleados(ID_EMPLEADO),
+    FOREIGN KEY (ID_CLASES) REFERENCES clases(ID),
+    FOREIGN KEY (ID_ENTRENAMIENTO) REFERENCES entrenamiento(ID)
+);
