@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios de Administrador</title>
+    <link rel="stylesheet" href="./styles/formulariosadmin.css">
+</head>
+
+<body>
+    <header>
+        <h1>Panel de Administrador</h1>
+    </header>
+    <main>
+        <section class="consultas">
+            <h2>Consultas</h2>
+            <div class="consulta">
+                <h3>Consultar Clases y Entrenamientos</h3>
+                <a href="./php/consultarClasesYEntrenamientos.php" class="boton">Acceder</a>
+            </div>
+            <div class="consulta">
+                <h3>Consultar Clientes</h3>
+                <a href="./php/consultarClientes.php" class="boton">Acceder</a>
+            </div>
+            <div class="consulta">
+                <h3>Consultar Empleados</h3>
+                <a href="./php/consultarEmpleados.php" class="boton">Acceder</a>
+            </div>
+            <div class="consulta">
+                <h3>Despedir Empleado</h3>
+                <a href="./php/borrarEmpleados.php" class="boton">Acceder</a>
+            </div>
+        </section>
+        <section class="registro">
+            <h2>Registro de Empleados</h2>
+            <form action="./php/registrarEmpleados.php" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" required><br><br>
+                <label for="dni">DNI:</label>
+                <input type="text" id="dni" name="dni" required><br><br>
+                <label for="Telefono">Telefono:</label>
+                <input type="number" id="Telefono" name="Telefono" required><br><br>
+                <label for="Correo">Correo electronico:</label>
+                <input type="email" id="Correo" name="Correo" required><br><br>
+                <label for="Ubicacion">Ubicacion:</label>
+                <input type="text" id="Ubicacion" name="Ubicacion" required><br><br>
+                <label for="Sueldo">Sueldo:</label>
+                <input type="number" id="Sueldo" name="Sueldo" required><br><br>
+                <label for="Horario">Horario:</label>
+                <input type="text" id="Horario" name="Horario" required><br><br>
+                <label for="dni">Contraseña:</label>
+                <input type="text" id="Contraseña" name="Contraseña" required><br><br>
+                <input type="submit" value="Registrar">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Todos los derechos reservados</p>
+    </footer>
+</body>
+
+</html>
