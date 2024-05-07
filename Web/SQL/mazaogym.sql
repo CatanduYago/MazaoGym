@@ -1,3 +1,8 @@
+CREATE DATABASE IF NOT EXISTS mazaogym;
+
+-- Usar la base de datos
+USE mazaogym;
+
 -- Crear tabla clientes
 CREATE TABLE clientes (
     DNI VARCHAR(10) PRIMARY KEY,
@@ -19,7 +24,8 @@ CREATE TABLE clases (
     DESCRIPCION TEXT
 );
 
--- Crear tabla entrenamiento
+-- Crear tabla entrenamien-- Crear la base de datos
+to
 CREATE TABLE entrenamiento (
     ID INT PRIMARY KEY AUTO_INCREMENT,
     NOMBRE VARCHAR(50),
