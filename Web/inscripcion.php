@@ -75,11 +75,11 @@ mysqli_close($conn);
     <main>
     <table>
     <tr>
-        <th colspan="2">Inscribete en nuestros entrenamientos</th>
+        <th colspan="2">Inscríbete en nuestros entrenamientos</th>
     </tr>
     <tr>
         <td>
-            <h4>Contactanos</h4>
+            <h4>Contáctanos</h4>
             <p><img src="/Web/img/telefono.png"> +34 924 45 67 89</p>
             <p><img src="/Web/img/correo.png"> mazaogym@gmail.com</p>
         </td>
@@ -100,11 +100,11 @@ mysqli_close($conn);
             <option value="hiit">Entrenamiento HIIT</option>
             <option value="boxeo">Boxeo</option>
         </optgroup>
-    </select><br>
+    </select><br><br>
     <label for="dni">DNI:</label><br>
-    <input type="text" id="dni" name="dni" required placeholder="DNI"><br
+    <input type="text" id="dni" name="dni" required placeholder="DNI"><br><br>
     <label for="email">Correo electrónico:</label><br>
-    <input type="email" id="correo" name="correo" required placeholder="Correo electrónico"><br>
+    <input type="email" id="correo" name="correo" required placeholder="Correo electrónico"><br><br>
     <input type="checkbox" id="terminos" name="terminos" required>
     <label for="terminos">Acepto los términos y condiciones de privacidad.</label><br> <!-- Nueva casilla de aceptación de términos -->
     <input type="submit" value="Enviar" class="botones-form">

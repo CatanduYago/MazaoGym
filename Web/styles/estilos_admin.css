@@ -24,7 +24,7 @@ main {
 }
 
 section {
-    background-color: #f9f9f9;
+    background-color: var(--otro);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 2rem;
@@ -47,7 +47,7 @@ h2 {
 .boton {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background-color: #333;
+    background-color: var(--menu-background-color);
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -55,7 +55,7 @@ h2 {
 }
 
 .boton:hover {
-    background-color: #555;
+    background-color: var(--otro2);
 }
 
 form{
@@ -74,11 +74,14 @@ input[type="text"],[type="number"],[type="email"] {
     margin-bottom: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
+    background-color: var(--otro2);
+    color: var(--otro);
+
 }
 
 input[type="submit"] {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--menu-background-color);
+    color: #ffffff;
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 5px;
@@ -87,5 +90,6 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #555;
+    background-color: var(--otro2);
+    
 }
