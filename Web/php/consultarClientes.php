@@ -1,4 +1,4 @@
-<?php require_once("../lib/conex.php") ?>
+<?php require_once("conex.php") ?>
 
 <!DOCTYPE html>
 <html lang="en">

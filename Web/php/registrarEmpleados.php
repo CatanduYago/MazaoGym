@@ -1,38 +1,21 @@
-<?php require_once("../lib/conex.php") ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrar Empleados</title>
-</head>
-<body>
-    <?php
+<?php
+require_once("conex.php");
 
-        $ID_Empleado = $_POST['ID_Empleado'];
-        $Nombre = $_POST['Nombre'];
-        $Apellidos = $_POST['Apellidos'];
-        $DNI = $_POST['DNI'];
-        $Telefono = $_POST['Telefono'];
-        $Correo = $_POST['Correo'];
-        $Direccion = $_POST['Direccion'];
-        $Sueldo = $_POST['Sueldo'];
-        $Horario = $_POST['Horario'];
+$Nombre = $_REQUEST['nombre'] ?? NULL;
+$Apellidos = $_REQUEST['apellidos']?? NULL;
+$DNI = $_REQUEST['dni']?? NULL;
+$Telefono = $_REQUEST['Telefono']?? NULL;
+$Correo = $_REQUEST['Correo']?? NULL;
+$Ubicacion = $_REQUEST['Ubicacion']?? NULL;
+$Sueldo = $_REQUEST['Sueldo']?? NULL;
+$Horario = $_REQUEST['Horario']?? NULL;
+$CONTRASENIA = $_REQUEST['Contraseña']?? NULL;
 
-        
-        
-        $strSQL = "INSERT INTO empleados(ID_Empleado, Nombre, Apellidos, DNI, Telefono, Direccion, Sueldo, Horario)";
-        $strSQL .= "VALUES ('$ID_Empleado', '$Nombre', '$Apellidos', '$DNI', $Telefono, $Direccion, '$Sueldo', $Horario)";
-        
-       
-        $r = mysqli_query($conn, $strSQL);
+$sql = "INSERT INTO empleados (Nombre, Apellidos, DNI, Telefono, Correo, Ubicacion, Sueldo, Horario, CONTRASENIA) 
+        VALUES ('$Nombre', '$Apellidos', '$DNI', '$Telefono', '$Correo', '$Ubicacion', '$Sueldo', '$Horario', '$CONTRASENIA')";
 
-        if ($r) {
-            echo "Los datos se han insertado correctamente en la base de datos.";
-        } else {
-            echo "Error al insertar los datos en la base de datos: " . mysqli_error($conn);
-        }
-    ?>
-</body>
-</html>
+if ($conn->query($sql) === TRUE) {
+    echo "Los datos se han insertado correctamente en la base de datos.";
+} else {
+    echo "Error al insertar los datos en la base de datos: " . $conn->error;
+}

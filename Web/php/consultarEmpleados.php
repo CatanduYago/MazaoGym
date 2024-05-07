@@ -1,4 +1,4 @@
-<?php require_once("../lib/conex.php") ?>
+<?php require_once("conex.php") ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,30 +17,31 @@
     ?>
     <table border='10'>
         <tr>
-            <th>ID_Empleado</th>
-            <th>Nombre</th>
-            <th>Apellidos</th>
+            <th>ID_EMPLEADO</th>
+            <th>NOMBRE</th>
+            <th>APELLIDOS</th>
             <th>DNI</th>  
-            <th>Teléfono</th> 
-            <th>Correo</th>
-            <th>Ubicación</th> 
-            <th>Pagos</th>
-            <th>Horario</th> 
-
+            <th>TELEFONO</th> 
+            <th>CORREO</th>
+            <th>UBICACION</th> 
+            <th>SUELDO</th>
+            <th>HORARIO</th> 
+            <th>CONTRASENIA</th> 
         </tr>
 
         <?php
         while ($dato = mysqli_fetch_assoc($r)) {
             echo "<tr>";
-            echo "<td>".$dato["ID_Empleado"]."</td>";
-            echo "<td>".$dato["Nombre"]."</td>";
-            echo "<td>".$dato["Apellidos"]."</td>";
+            echo "<td>".$dato["ID_EMPLEADO"]."</td>";
+            echo "<td>".$dato["NOMBRE"]."</td>";
+            echo "<td>".$dato["APELLIDOS"]."</td>";
             echo "<td>".$dato["DNI"]."</td>";
-            echo "<td>".$dato["Telefono"]."</td>";
-            echo "<td>".$dato["Correo"]."</td>"; 
-            echo "<td>".$dato["Direccion"]."</td>"; 
-            echo "<td>".$dato["Sueldo"]."</td>";
-            echo "<td>".$dato["Horario"]."</td>"; 
+            echo "<td>".$dato["TELEFONO"]."</td>";
+            echo "<td>".$dato["CORREO"]."</td>"; 
+            echo "<td>".$dato["UBICACION"]."</td>"; 
+            echo "<td>".$dato["SUELDO"]."</td>";
+            echo "<td>".$dato["HORARIO"]."</td>"; 
+            echo "<td>".$dato["CONTRASENIA"]."</td>"; 
             echo "</tr>";
         }
         ?>

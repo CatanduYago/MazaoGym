@@ -1,4 +1,3 @@
-<?php require_once("../lib/conex.php") ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,23 +7,11 @@
     <title>Borrar Registro</title>
 </head>
 <body>
-<?php
- $ID_Empleado = $_POST['ID_Empleado'];
- $Nombre = $_POST['Nombre'];
- $Apellidos = $_POST['Apellidos'];
- $DNI = $_POST['DNI'];
- $Telefono = $_POST['Telefono'];
- $Correo = $_POST['Correo'];
- $Direccion = $_POST['Direccion'];
- $Sueldo = $_POST['Sueldo'];
- $Horario = $_POST['Horario'];
-   
-   $sql = "DELETE FROM empleados WHERE Nombre = '$Nombre' AND DNI = '$DNI'";
- if ($conn->query($sql) === TRUE) {
-        echo "Registro borrado con éxito";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-?>   
+    <h2>Seleccione el empleado que desea borrar:</h2>
+    <form action="borrarEmpleadoss.php" method="post">
+        <label for="dni">DNI del empleado:</label>
+        <input type="text" id="dni" name="DNI" required>
+        <input type="submit" value="Borrar">
+    </form>
 </body>
 </html>

@@ -25,7 +25,6 @@ CREATE TABLE clases (
 );
 
 -- Crear tabla entrenamien-- Crear la base de datos
-to
 CREATE TABLE entrenamiento (
     ID INT PRIMARY KEY AUTO_INCREMENT,
     NOMBRE VARCHAR(50),
