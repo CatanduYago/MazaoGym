@@ -5,9 +5,8 @@
         $nombre_usuario = $_POST['username'];
         $contrasena = $_POST['contrasena'];
 
-        if ($nombre_usuario == 'admin' && $contrasena == '.33sC6$FvV68kV=SUmQz=V^mB') {
-            header("Location: /Web/formularios.html"); 
-            exit;
+        if ($nombre_usuario == 'admin' && $contrasena == '33668B') {
+            header("Location:/Web/formularios.html"); 
         }
 
         $strSQL = "SELECT * FROM clientes WHERE nombre_usuario = '$nombre_usuario' AND contrasenia = '$contrasena'";
@@ -27,4 +26,4 @@
         header("Location: /Web/login.php");
         exit;
     }
-?>
+
