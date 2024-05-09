@@ -7,24 +7,7 @@ if (!isset($_SESSION['username'])) {
     exit();
 }
 
-$Servidor = "127.0.0.1";
-$usu = "root";
-$contrasena = "";
-$dbname = "mazaogym";
-$conn = mysqli_connect($Servidor, $usu, $contrasena, $dbname);
-$nombre_usuario = $_SESSION['username'];
-
-$sql_foto_perfil = "SELECT FOTO_PERFIL FROM clientes WHERE NOMBRE_USUARIO = '$nombre_usuario'";
-$resultado_foto_perfil = mysqli_query($conn, $sql_foto_perfil);
-
-if ($resultado_foto_perfil && mysqli_num_rows($resultado_foto_perfil) > 0) {
-    $fila_foto_perfil = mysqli_fetch_assoc($resultado_foto_perfil);
-    $foto_perfil = $fila_foto_perfil['FOTO_PERFIL'];
-} else {
-    $foto_perfil = "/Web/img/perfil/perfil1.png";
-}
-
-mysqli_close($conn);
+include "conexion.php";
 ?>
 
 <!DOCTYPE html>
@@ -37,6 +20,14 @@ mysqli_close($conn);
     <link rel="stylesheet" href="/Web/styles/estilos_general.css">
     <link rel="stylesheet" href="/Web/styles/estilos_inscripcion.css">
     <link rel="icon" href="/Web/img/logo2.png">
+    <script>
+        function enviarFormulario() {
+            var formulario = document.getElementById("formulario_inscripcion");
+            formulario.reset();
+
+            alert("¡Inscripción realizada correctamente!");
+        }
+    </script>
 </head>
 
 <body>
@@ -61,7 +52,6 @@ mysqli_close($conn);
                 echo '<button class="dropbtn">' . $_SESSION['username'] . '</button>';
                 echo '<div class="dropdown-content">';
                 echo '<a href="/Web/configuracion.php">Configuración de Perfil</a>';
-                echo '<a href="#">Ayuda</a>';
                 echo '<a href="/Web/php/logout.php">Cerrar Sesión</a>';
                 echo '</div>';
                 echo '</div>';
@@ -74,46 +64,45 @@ mysqli_close($conn);
     </header>
     <main>
     <table>
-    <tr>
-        <th colspan="2">Inscríbete en nuestros entrenamientos</th>
-    </tr>
-    <tr>
-        <td>
-            <h4>Contáctanos</h4>
-            <p><img src="/Web/img/telefono.png"> +34 924 45 67 89</p>
-            <p><img src="/Web/img/correo.png"> mazaogym@gmail.com</p>
-        </td>
-        <td>
-        <form action="/Web/php/inscripcion_final.php" method="post">
-    <label for="tipo">Seleccione:</label><br>
-    <select id="tipo" name="tipo" class="selectgroup">
-        <optgroup label="Clases">
-            <option value="spinning">Spinning</option>
-            <option value="aerobic">Aeróbic</option>
-            <option value="bodypump">Body Pump</option>
-            <option value="crossfit">CrossFit</option>
-            <option value="yoga">Yoga</option>
-            <option value="pilates">Pilates</option>
-        </optgroup>
-        <optgroup label="Entrenamientos">
-            <option value="funcional">Entrenamiento funcional</option>
-            <option value="hiit">Entrenamiento HIIT</option>
-            <option value="boxeo">Boxeo</option>
-        </optgroup>
-    </select><br><br>
-    <label for="dni">DNI:</label><br>
-    <input type="text" id="dni" name="dni" required placeholder="DNI"><br><br>
-    <label for="email">Correo electrónico:</label><br>
-    <input type="email" id="correo" name="correo" required placeholder="Correo electrónico"><br><br>
-    <input type="checkbox" id="terminos" name="terminos" required>
-    <label for="terminos">Acepto los términos y condiciones de privacidad.</label><br> <!-- Nueva casilla de aceptación de términos -->
-    <input type="submit" value="Enviar" class="botones-form">
-    <input type="reset" value="Cancelar" class="botones-form">
-</form>
-
-        </td>
-    </tr>
-</table>
+            <tr>
+                <th colspan="2">Inscríbete en nuestros entrenamientos</th>
+            </tr>
+            <tr>
+                <td>
+                    <h4>Contáctanos</h4>
+                    <p><img src="/Web/img/telefono.png"> +34 924 45 67 89</p>
+                    <p><img src="/Web/img/correo.png"> mazaogym@gmail.com</p>
+                </td>
+                <td>
+                    <form id="formulario_inscripcion" action="/Web/index.php"onsubmit="enviarFormulario()">
+                        <label for="tipo">Seleccione:</label><br>
+                        <select id="tipo" name="tipo" class="selectgroup">
+                            <optgroup label="Clases">
+                                <option value="spinning">Spinning</option>
+                                <option value="aerobic">Aeróbic</option>
+                                <option value="bodypump">Body Pump</option>
+                                <option value="crossfit">CrossFit</option>
+                                <option value="yoga">Yoga</option>
+                                <option value="pilates">Pilates</option>
+                            </optgroup>
+                            <optgroup label="Entrenamientos">
+                                <option value="funcional">Entrenamiento funcional</option>
+                                <option value="hiit">Entrenamiento HIIT</option>
+                                <option value="boxeo">Boxeo</option>
+                            </optgroup>
+                        </select><br><br>
+                        <label for="dni">DNI:</label><br>
+                        <input type="text" id="dni" name="dni" required placeholder="DNI"><br><br>
+                        <label for="email">Correo electrónico:</label><br>
+                        <input type="email" id="correo" name="correo" required placeholder="Correo electrónico"><br><br>
+                        <input type="checkbox" id="terminos" name="terminos" required>
+                        <label for="terminos">Acepto los términos y condiciones de privacidad.</label><br> <!-- Nueva casilla de aceptación de términos -->
+                        <input type="submit" value="Enviar" class="botones-form">
+                        <input type="reset" value="Cancelar" class="botones-form">
+                    </form>
+                </td>
+            </tr>
+        </table>
     </main>
 
 </body>

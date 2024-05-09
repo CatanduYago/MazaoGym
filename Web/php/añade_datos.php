@@ -2,11 +2,7 @@
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $Servidor = "127.0.0.1";
-    $usu = "root";
-    $contrasena = "";
-    $dbname = "mazaogym";
-    $conn = mysqli_connect($Servidor, $usu, $contrasena, $dbname);
+    include "conexion.php";
 
     if ($conn->connect_error) {
         die("Error en la conexión: " . $conn->connect_error);

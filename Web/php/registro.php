@@ -1,5 +1,6 @@
 <?php
-require_once("conex.php");
+    include "conexion.php";
+
 
 $dni = $_POST["dni"];
 $nombre = $_POST["nombre"];

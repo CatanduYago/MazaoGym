@@ -34,7 +34,6 @@
                 echo '<button class="dropbtn">' . $_SESSION['username'] . '</button>';
                 echo '<div class="dropdown-content">';
                 echo '<a href="/Web/configuracion.php">Configuración de Perfil</a>';
-                echo '<a href="#">Ayuda</a>';
                 echo '<a href="/Web/php/logout.php">Cerrar Sesión</a>';
                 echo '</div>';
                 echo '</div>';

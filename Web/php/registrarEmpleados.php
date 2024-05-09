@@ -1,5 +1,6 @@
 <?php
-require_once("conex.php");
+    include "conexion.php";
+
 
 $Nombre = $_REQUEST['nombre'] ?? NULL;
 $Apellidos = $_REQUEST['apellidos']?? NULL;

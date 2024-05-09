@@ -6,7 +6,7 @@ if (!isset($_SESSION['username'])) {
     exit();
 }
 
-require_once("conex.php");
+include "conexion.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["foto"])) {
     $nombre_usuario = $_SESSION['username'];

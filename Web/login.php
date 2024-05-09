@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acceso</title>
+    <title>Accede</title>
     <link rel="stylesheet" href="/Web/styles/estilos_general.css">
     <link rel="stylesheet" href="/Web/styles/estilos_usuario.css">
     <link rel="icon" href="/Web/img/logo2.png">
@@ -80,7 +80,6 @@
                 echo '<button class="dropbtn">' . $_SESSION['username'] . '</button>';
                 echo '<div class="dropdown-content">';
                 echo '<a href="/Web/configuracion.php">Configuración de Perfil</a>';
-                echo '<a href="#">Ayuda</a>';
                 echo '<a href="/Web/php/logout.php">Cerrar Sesión</a>';
                 echo '</div>';
                 echo '</div>';

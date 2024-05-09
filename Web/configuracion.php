@@ -7,11 +7,7 @@ if (!isset($_SESSION['username'])) {
     exit();
 }
 
-$Servidor = "127.0.0.1";
-$usu = "root";
-$contrasena = "";
-$dbname = "mazaogym";
-$conn = mysqli_connect($Servidor, $usu, $contrasena, $dbname);
+include "conexion.php";
 $nombre_usuario = $_SESSION['username'];
 
 $sql_foto_perfil = "SELECT FOTO_PERFIL FROM clientes WHERE NOMBRE_USUARIO = '$nombre_usuario'";
@@ -61,7 +57,6 @@ mysqli_close($conn);
                 echo '<button class="dropbtn">' . $_SESSION['username'] . '</button>';
                 echo '<div class="dropdown-content">';
                 echo '<a href="/Web/configuracion.php">Configuración de Perfil</a>';
-                echo '<a href="#">Ayuda</a>';
                 echo '<a href="/Web/php/logout.php">Cerrar Sesión</a>';
                 echo '</div>';
                 echo '</div>';

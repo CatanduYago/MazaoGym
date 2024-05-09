@@ -1,6 +1,7 @@
-<?php require_once("../lib/conex.php") ?>
-
 <?php
+
+include "conexion.php";
+
 $dni = $_REQUEST['dni'];
 $nombre = $_REQUEST['nombre'];
 $nombre_usuario = generarNombreUsuario($nombre, $apellidos, $dni);

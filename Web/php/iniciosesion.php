@@ -1,5 +1,5 @@
 <?php 
-    require_once("conex.php");
+    include "conexion.php";
 
     if(isset($_POST['username'], $_POST['contrasena'])) {
         $nombre_usuario = $_POST['username'];
