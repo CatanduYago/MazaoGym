@@ -69,7 +69,7 @@
                         <label for="email">Asunto:</label><br>
                         <input type="asunto" id="asunto" name="asunto" required placeholder="Asunto"><br>
                         <label for="mensaje">Mensaje:</label><br>
-                        <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Mensaje"></textarea><br>
+                        <textarea id="mensaje" name="detalles" rows="4" required placeholder="Mensaje"></textarea><br>
                         <input type="submit" value="Enviar" class="botones-form">
                         <input type="reset" value="Cancelar" class="botones-form">
 
