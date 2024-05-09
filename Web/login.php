@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accede</title>
     <link rel="stylesheet" href="/Web/styles/estilos_general.css">
-    <link rel="stylesheet" href="/Web/styles/estilos_usuario.css">
+    <link rel="stylesheet" href="/Web/styles/estilos_usuarios.css">
     <link rel="icon" href="/Web/img/logo2.png">
 
     <script>
@@ -53,8 +53,6 @@
             alertBox.classList.remove("show");
         }
     </script>
-
-
 </head>
 
 <body>
@@ -88,7 +86,7 @@
             }
             ?>
         </div>
-        
+
     </header>
     <main>
         <!-- -->
@@ -130,16 +128,14 @@
             <a href="https://www.instagram.com/mazaogym/" class="redsocial"><img src="/Web/img/instagram.png" class="logo-redsocial"></a>
             <a href="https://x.com/MazaoGym" class="redsocial"><img src="/Web/img/twitter.png" class="logo-redsocial"></a>
             <a href="https://www.facebook.com/profile.php?id=61558495199135" class="redsocial"><img src="/Web/img/facebook.png" class="logo-redsocial"></a>
-            <span> <a href="https://altafitgymclub.com/aviso-legal/" target="_blank">Aviso legal</a> | <a
-                    href="https://altafitgymclub.com/politica-de-cookies/" target="_blank">Política de cookies</a>
+            <span> <a href="https://altafitgymclub.com/aviso-legal/" target="_blank">Aviso legal</a> | <a href="https://altafitgymclub.com/politica-de-cookies/" target="_blank">Política de cookies</a>
             </span>
 
         </div>
         <div id="encuentra-footer-div">
             <p class="nombre-seccion">ENCUÉNTRANOS</p>
             <!-- iFrame del mapa con la localizacion-->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d652.9965703877186!2d-6.9806870269362005!3d38.87383348440964!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1712772750511!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen=""
-                loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="localizacion"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d652.9965703877186!2d-6.9806870269362005!3d38.87383348440964!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1712772750511!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="localizacion"></iframe>
     </footer>
     <div id="alerta" class="alerta">
         <span id="alert-message"></span>
