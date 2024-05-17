@@ -1,4 +1,4 @@
-<?php require_once("conex.php"); ?>
+<?php require_once("conexion.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
