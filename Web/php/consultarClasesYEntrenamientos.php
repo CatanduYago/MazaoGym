@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Web/styles/estilos_general.css">
     <title>Consultar Clases y Entrenamientos</title>
     <style>
         table {
